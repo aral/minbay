@@ -49,7 +49,7 @@ exports.create = function (api) {
                       location.reload()
                     }}, 'Import'),
                     h('button', {onclick: function (e){
-                      localStorage['browser/.ssb/secret'] = ''
+                      localStorage.remote = ''
                       alert('Your remote pub has been deleted')
                       e.preventDefault()
                       location.reload()
