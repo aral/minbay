@@ -102,6 +102,10 @@ input, textarea {
   font-family: sans-serif;
 }
 
+textarea.import {
+  width: 97%;
+}
+
 input:focus, .compose:focus, .message:focus, button:focus {
   outline: none;
   border-color: #0088cc; 
