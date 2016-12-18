@@ -50,14 +50,18 @@ exports.create = function (api) {
         var id = require('../keys').id
         var compose = api.message_compose(
           {type: 'post', recps: [], private: true}, 
-          function (msg) {
-            msg.recps = [id].concat(msg.mentions).filter(function (e) {
-              return ref.isFeed('string' === typeof e ? e : e.link)
-            })
-            if(!msg.recps.length)
-              throw new Error('cannot make private message without recipients - just mention the user in an at reply in the message you send')
-            return msg
-          })
+            {
+            prepublish: function (msg) {
+              msg.recps = [id].concat(msg.mentions).filter(function (e) {
+                return ref.isFeed('string' === typeof e ? e : e.link)
+              })
+              if(!msg.recps.length)
+                throw new Error('cannot make private message without recipients - just mention the user in an at reply in the message you send')
+              return msg
+            },
+            placeholder: 'Write a private message'
+          }
+          )
     
         var content = h('div.column.scroller__content')
         var div = h('div.column.scroller',
