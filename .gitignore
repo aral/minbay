@@ -1,3 +1,5 @@
+modules_basic
+modules_core
 node_modules
 npm-debug.log
 .npmignore
