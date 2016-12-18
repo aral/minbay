@@ -5,7 +5,6 @@ module.exports = {
   "git.js":  require('./git.js'),
   "key.js":  require('./key.js'),
   "notifications.js":  require('./notifications.js'),
-  "raw.js": require('./raw.js'),
   "search.js": require('./search'),
   "split.js":  require('./split.js'),
 }

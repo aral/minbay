@@ -46,45 +46,31 @@ exports.create = function (api) {
     },
 
     screen_view: function (path) {
-      if(path !== '/private') return
-
-      var div = h('div.column.scroller',
-          {style: {'overflow':'auto'}})
-
-      // if local id is different from sbot id, sbot won't have indexes of
-      // private threads
-      //TODO: put all private indexes client side.
-      var id = require('../keys').id
-      api.sbot_whoami(function (err, feed) {
-        if (err) return console.error(err)
-        if(id !== feed.id)
-          return div.appendChild(h('h4',
-            'Private messages are not supported in the lite client.'))
-
+      if(path === '/private') {
+        var id = require('../keys').id
         var compose = api.message_compose(
-          {type: 'post', recps: [], private: true},
-          {
-            prepublish: function (msg) {
-              msg.recps = [id].concat(msg.mentions).filter(function (e) {
-                return ref.isFeed('string' === typeof e ? e : e.link)
-              })
-              if(!msg.recps.length)
-                throw new Error('cannot make private message without recipients - just mention the user in an at reply in the message you send')
-              return msg
-            },
-            placeholder: 'Write a private message'
-          }
-          )
-
+          {type: 'post', recps: [], private: true}, 
+          function (msg) {
+            msg.recps = [id].concat(msg.mentions).filter(function (e) {
+              return ref.isFeed('string' === typeof e ? e : e.link)
+            })
+            if(!msg.recps.length)
+              throw new Error('cannot make private message without recipients - just mention the user in an at reply in the message you send')
+            return msg
+          })
+    
         var content = h('div.column.scroller__content')
-        div.appendChild(h('div.scroller__wrapper', compose, content))
-
+        var div = h('div.column.scroller',
+          {style: {'overflow':'auto'}},
+          h('div.scroller__wrapper', compose, content)
+        )
+    
         pull(
-          u.next(api.sbot_log, {old: false, limit: 100}),
+          api.sbot_log({old: false}),
           unbox(),
           Scroller(div, content, api.message_render, true, false)
         )
-
+    
         pull(
           u.next(api.sbot_log, {reverse: true, limit: 1000}),
           unbox(),
@@ -92,9 +78,9 @@ exports.create = function (api) {
             if(err) throw err
           })
         )
-      })
-
-      return div
+    
+        return div
+      }
     },
 
     message_meta: function (msg) {
