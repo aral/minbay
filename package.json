@@ -11,6 +11,7 @@
     "cont": "^1.0.3",
     "dataurl-": "^0.1.0",
     "depject": "^3.0.0",
+    "ecstatic": "^2.1.0",
     "hjson": "^2.0.3",
     "human-time": "0.0.1",
     "hypercombo": "0.1.0",
@@ -34,7 +35,7 @@
     "pull-reconnect": "^0.0.3",
     "pull-scroll": "^0.2.0",
     "pull-stream": "^3.4.5",
-    "scuttlebot": "^8.7.2",
+    "scuttlebot": "^9.4.0",
     "simple-mime": "^0.1.0",
     "split-buffer": "^1.0.0",
     "ssb-avatar": "^0.2.0",
@@ -60,7 +61,8 @@
   },
   "scripts": {
     "build": "sh ipm.sh && node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
-    "start": "node server"
+    "start": "node node_modules/scuttlebot/sbot server",
+    "sbot": "node node_modules/scuttlebot/sbot server && node node_modules/scuttlebot/sbot invite.create --modern"
   },
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
   "license": "MIT"
