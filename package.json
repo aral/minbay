@@ -60,7 +60,8 @@
     "indexhtmlify": "^1.3.1"
   },
   "scripts": {
-    "build": "sh ipm.sh && node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
+    "clone": "sh ipm.sh",
+    "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
     "start": "node sbot server --allowPrivate"
   },
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
