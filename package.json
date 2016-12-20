@@ -61,8 +61,7 @@
   },
   "scripts": {
     "build": "sh ipm.sh && node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
-    "start": "node node_modules/scuttlebot/sbot server",
-    "sbot": "node node_modules/scuttlebot/sbot server && node node_modules/scuttlebot/sbot invite.create --modern"
+    "start": "node sbot server --allowPrivate"
   },
   "author": "Dominic Tarr <dominic.tarr@gmail.com> (http://dominictarr.com)",
   "license": "MIT"
