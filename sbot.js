@@ -59,25 +59,9 @@ if (argv[0] == 'server') {
   // write RPC manifest to ~/.ssb/manifest.json
   fs.writeFileSync(manifestFile, JSON.stringify(server.getManifest(), null, 2))
 
-  var http = require('http');
-  var serve = require('ecstatic');
-  var client = require('ssb-client')
-  
-  http.createServer(
-    serve({ root: __dirname + '/build/'})
-  ).listen(3000);
-  
-  opts = {"modern": true}
-  
-  client(function (err, sbot) {
-    if(err) throw err
-    sbot.invite.create(opts, function (err, invite) {
-      if(err) throw err
-      var lite = invite
-      console.log('\nYour lite client is now listening at http://localhost:3000/\nHere\'s an invite. Copy and paste the link below into your browser.\nhttp://localhost:3000#' + invite + '\n')
-    })
-  })
-  
+  var lite = require('./serve')
+  lite.serve()
+
 } else {
 
   // normal command:
