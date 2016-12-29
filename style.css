@@ -1,9 +1,20 @@
 body {
-  font-family: monospace;
+  font-family: sans-serif;
 }
 
 * {
   word-break: break-word;
+}
+
+a:link, a:visited, a:active {
+  color: #08c;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #005580;
+  text-decoration: underline;
 }
 
 .screen {
@@ -11,6 +22,7 @@ body {
   top: 0; bottom: 0;
   left: 0; right: 0;
   overflow-y: hidden;
+  background: #f9f9f9;
 }
 
 .column {
@@ -88,7 +100,6 @@ pre {
 .compose {
   width: 100%;
   margin-top: .5em;
-  margin-bottom: .5em;
 }
 
 /* messages */
@@ -96,7 +107,15 @@ pre {
 .message {
   position: relative;
   flex-basis: 0;
-  margin-bottom: .5em;
+  padding: .5em;
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.message:focus, .message:hover {
+  background: #f5f5f5;
 }
 
 .message_content--mini div > span {
@@ -196,6 +215,14 @@ pre {
   margin-left: .5em;
 }
 
+input, textarea {
+ border: 1px solid #ddd;
+ border-radius: 2px;
+ font-family: sans-serif;
+ font-size: .9em;
+}
+
+
 /* lightbox - used in message-confirm */
 
 .lightbox {
@@ -210,7 +237,10 @@ pre {
 /* searchprompt */
 
 .searchprompt {
+  margin-top: 1px;
+  margin-bottom: 1px;
   float: left;
+  padding: .5em;
 }
 
 /* TextNodeSearcher highlights */
@@ -244,7 +274,7 @@ pre {
   width: 1em;
   height: 1em;
   margin: .5em;
-  background: blue;
+  background: #08c;
 }
 
 .error {
@@ -254,8 +284,10 @@ pre {
 /* tabs */
 
 .header {
-  border-bottom: 1px inset #ccc;
+  background: linear-gradient(#fff, #eee);
+  border-bottom: 1px inset #ddd;
   flex-shrink: 0;
+  z-index: 1;
 }
 
 .header__tabs {
@@ -284,7 +316,6 @@ pre {
 
 .hypertabs__tab {
   color: black;
-  border-top-left-radius: 5px;
   margin-left: -3px;
   border-bottom: none;
   padding-top: .56em;
@@ -301,10 +332,9 @@ pre {
 }
 
 .hypertabs--selected {
+  background: linear-gradient(#eee, #ddd);
   font-weight: bold;
-  background: #ccc;
-  border-top-right-radius: 5px;
-  z-index: 1;
+  z-index: 3;
 }
 
 .hypertabs__x  {
