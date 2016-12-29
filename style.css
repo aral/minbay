@@ -22,9 +22,10 @@ a:focus {
 }
 
 .screen {
+  width: 100%;
   position: absolute;
   top: 0; bottom: 0;
-  left: 0; right: 0;
+  left: 0;right: 0;
   overflow-y: hidden;
   background: #f9f9f9;
 }
@@ -301,22 +302,36 @@ textarea {
   z-index: 1;
 }
 
-.header__tabs {
+.left {
+  position: fixed;
+  left: 0;
+  width: 20%;
+  height: 100%;
+}
+
+.hypertabs__content {
+  margin-left: auto;
+  width: 80%;
+}
+
+/*.header__tabs {
   width: 100%; 
   min-width: 0px;
-}
+}*/
 
 /* --- hypertabs ------- */
 
 .hypertabs__tabs {
   min-width: 0px;
-  width: 100%;
+  width: 94%;
 }
 
 .hypertabs__tab {
   overflow-x: hidden;
   min-width: 0px;
   width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 2px;
 }
 
 .hypertabs__button {
@@ -327,12 +342,13 @@ textarea {
 
 .hypertabs__tab {
   color: black;
-  margin-left: -3px;
+  // margin-left: -3px;
   border-bottom: none;
-  padding-top: .56em;
+  padding-top: .5em;
   padding-left: 1em;
-  border-left: 1px solid #ccc;
+  // border-left: 1px solid #ccc;
   width: 100%; 
+  height: 1.5em;
 }
 
 .hypertabs__tab > a {
@@ -350,7 +366,7 @@ textarea {
 
 .hypertabs__x  {
   display: none; 
-  transform: translate(-4px, -3px);
+  transform: translate(-4px, -2px);
 }
 
 .hypertabs--selected .hypertabs__x {
