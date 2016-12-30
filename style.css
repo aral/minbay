@@ -259,7 +259,7 @@ textarea {
 
 .header__search {
   position: absolute;
-  bottom: .5em;
+  bottom: 3.5em;
   left: .5em;
 }
 
@@ -393,5 +393,8 @@ textarea {
 
 
 .logo {
+  position: absolute;
+  bottom: .5em;
+  font-size: .8em;
   padding-left: 1em;
 }
