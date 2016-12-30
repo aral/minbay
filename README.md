@@ -10,7 +10,7 @@ Minbay supports only the lite client for remote and local. To use the lite clien
 
 ```
 % git clone https://gitmx.com/%25UTn%2FAoIVVF%2F4yKI7PKIWrHeWb1q7sTMCWVyYY1XTiCk%3D.sha256 minbay
-% cd minbay && npm install && npm run build
+% cd minbay && npm install && npm run clone && npm run build
 % npm start
 ```
 At this point Sbot and Minbay should launch. It'll output 
