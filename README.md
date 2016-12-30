@@ -1,5 +1,7 @@
 # Minbay
 
+![minbay.png](minbay.png)
+
 Minbay is a simple-as-possible local lite client for [Secure Scuttlebutt](http://scuttlebot.io) using [Patchbay](https://gitmx.com/%25s9mSFATE4RGyJx9wgH22lBrvD4CgUQW4yeguSWWjtqc%3D.sha256) modules and compiled using [depject](https://gitmx.com/%25%2BGrd1NiHD3RgaCEbcesLGeEFpjL1AfeN5xfkGaezyoI%3D.sha256).
 
 Minbay supports only the lite client for remote and local. To use the lite client you'll need a local lite client invite, as well as an invite to a pub on the main sbot network. 
