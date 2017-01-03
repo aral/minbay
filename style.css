@@ -10,6 +10,18 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 1.2em;
 }
 
+hr {
+  border: solid #eee;
+  clear: both;
+  border-width: 1px 0 0;
+  height: 0;
+  margin-bottom: .9em;
+}
+
+p {
+  margin-top: .35ex;
+}
+
 a:link, a:visited, a:active {
   color: #08c;
   text-decoration: none;
@@ -235,6 +247,10 @@ textarea {
   padding: .5em;
 }
 
+.import {
+  width: 97%
+}
+
 
 /* lightbox - used in message-confirm */
 
@@ -243,7 +259,7 @@ textarea {
   margin-top: 3em;
   margin-bottom: 3em;
   width: 600px;
-  background: white;
+  // background: white;
   z-index: 5;
 }
 
@@ -259,8 +275,13 @@ textarea {
 
 .header__search {
   position: absolute;
-  bottom: 3.5em;
+  bottom: .5em;
   left: .5em;
+}
+
+.logo {
+  font-size: .8em;
+  padding: .2em;
 }
 
 /* TextNodeSearcher highlights */
@@ -313,13 +334,13 @@ textarea {
 .left {
   position: fixed;
   left: 0;
-  width: 20%;
+  width: 17%;
   height: 100%;
 }
 
 .hypertabs__content {
   margin-left: auto;
-  width: 80%;
+  width: 79%;
 }
 
 /*.header__tabs {
@@ -391,10 +412,32 @@ textarea {
   background: lightblue;
 }
 
-
-.logo {
-  position: absolute;
-  bottom: .5em;
-  font-size: .8em;
-  padding-left: 1em;
+button {
+  font-size: .9em;
+  background: #eee;
+  background: #eee linear-gradient(#eee, #ccc);
+  border: 1px solid #aaa;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-radius: 5px;
+  color: #444;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  margin: .1em;
+  padding-top: .4em;
+  padding-left: .6em;
+  padding-right: .6em;
+  padding-bottom: .4em; 
 }
+
+button:hover, button:focus {
+  background: #ddd;
+  background: #ddd linear-gradient(#ddd, #aaa);
+  border: 1px solid #888;
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  color: #222;
+}
+
