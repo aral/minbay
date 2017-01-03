@@ -180,20 +180,26 @@ pre {
 
 .suggest-box > * {
   display: block;
+  font-weight: normal;
 }
+
 
 .suggest-box ul {
   padding: 0;
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 .suggest-box .selected {
-  background: yellow;
+  background: #eee;
 }
 
 .suggest-box {
   width: max-content;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 2px;
 }
 
 /* emoji */
