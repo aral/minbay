@@ -3,7 +3,8 @@ body {
 }
 
 * {
-  word-break: break-word;
+  word-wrap: break-word;
+  
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -83,8 +84,8 @@ a:focus {
 }
 
 pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  white-space: pre-line;
+  word-wrap: break-all;
 }
 
 .wide {
