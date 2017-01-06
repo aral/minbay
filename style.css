@@ -211,6 +211,12 @@ pre {
 
 /* avatar */
 
+.avatar--full {
+  margin: .5em;
+  width: 100%;
+  border-radius: 5px;
+}
+
 .avatar--large {
   width: 10em;
   height: 10em;
