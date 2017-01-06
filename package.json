@@ -60,7 +60,7 @@
     "indexhtmlify": "^1.3.1"
   },
   "scripts": {
-    "fetch": "",
+    "clone": "rm -rf ssb-pkgs modules_basic modules_core && git clone ssb://%DcQl5bvPqEeU6ETOfdB98o6Q3rRXPuq4HbXaBt3tBSE=.sha256 ssb-pkgs && git clone ssb://%LBG/u6lKSeaTEd/8mqaJU4sF7ynn+g3YsGkngIwBUTw=.sha256 modules_basic && git clone ssb://%QVRZ+aDC9lypSEJw/X234XxwkavZvKfdNgtBGpreP1U=.sha256 modules_core",
     "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
     "start": "node sbot server --allowPrivate"
   },
