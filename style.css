@@ -348,6 +348,7 @@ textarea {
   position: fixed;
   left: 0;
   width: 17%;
+  max-width: 200px;
   height: 100%;
 }
 
