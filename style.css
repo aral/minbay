@@ -193,7 +193,7 @@ pre {
 }
 
 .suggest-box .selected {
-  background: #eee;
+  background: #ddd;
 }
 
 .suggest-box {
@@ -377,6 +377,11 @@ textarea {
   border-radius: 2px;
   margin-top: -1px;
   background: linear-gradient(#fff, #eee);
+}
+
+.hypertabs__tab:hover {
+  background: linear-gradient(#eee, #ddd);
+  color: #fff;
 }
 
 .hypertabs__button {
