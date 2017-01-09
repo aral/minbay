@@ -25,6 +25,15 @@ Click the invite to connect the lite client in your browser to the sbot daemon.
 
 Next you may need an invite to a pub on the main network to see the posts of others, see [scuttlebot.io](http://scuttlebot.io/docs/social/join-a-pub.html) for details
 
+### Offline install
+
+If you're already on Scuttlebot and have git-ssb installed, you can install all of Minbay's dependencies while offline with [yarn](http://yarnpkg.com).
+
+```
+yarn run ssb
+yarn start
+```
+
 ## License
 
 MIT
