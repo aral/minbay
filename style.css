@@ -94,6 +94,13 @@ a:focus {
 pre {
   white-space: pre-line;
   word-wrap: break-all;
+  background: #eee;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+code {
+  background: #eee;
 }
 
 .wide {
