@@ -68,11 +68,6 @@ exports.create = function (api) {
     img.classList.add('avatar--full')
     var selected = null, selected_data = null
 
-    //avatar({links: api.sbot_links}, id, id, function (err, avatar){
-    //  if (err) throw err
-    //  name = avatar.name
-    //  image = avatar.image
-    //})
     getAvatar({links: api.sbot_links}, id, id, function (err, avatar) {
       if (err) return console.error(err)
       //don't show user has already selected an avatar.
@@ -80,11 +75,14 @@ exports.create = function (api) {
       if(ref.isBlob(avatar.image))
         img.src = api.blob_url(avatar.image)
     })
-
+     
     //reposition hypertabs menu to inside a container...
     tabs.insertBefore(h('div.header.left',
       h('div', 
         h('a', {href: '#' + id}, img)
+      ),
+      h('p.edit', 
+        h('a', {innerHTML: '<a href="#Edit Profile">Edit your profile</a>'})
       ),
       h('div.header__tabs', tabs.firstChild), //tabs
       h('div.header__search', h('div', search), api.menu())

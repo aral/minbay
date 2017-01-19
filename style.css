@@ -476,3 +476,7 @@ button:hover, button:focus {
   color: #222;
 }
 
+.edit {
+  margin-left: .6em;
+  font-size: .8em;
+}
