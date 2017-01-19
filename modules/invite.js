@@ -6,11 +6,6 @@ var h = require('hyperscript')
 
 var Progress = require('hyperprogress')
 
-//var plugs = require('../plugs')
-//var sbot_publish = plugs.first(exports.sbot_publish = [])
-//var sbot_gossip_connect = plugs.first(exports.sbot_gossip_connect = [])
-//var follower_of = plugs.first(exports.follower_of = [])
-
 exports.needs = {
   sbot_publish: 'first',
   sbot_gossip_connect: 'first',
@@ -52,7 +47,7 @@ exports.create = function (api) {
 
           //if they already follow us, just check we actually follow them.
           if(err) api.follower_of(id, data.key, function (_err, follows) {
-              if(follows) { location.hash = 'Identify' }
+              if(follows) { location.hash = '' }
               else next()
             })
           else next()

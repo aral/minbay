@@ -32,7 +32,7 @@ exports.create = function (api) {
                         about: id,
                         name: identify.value || undefined,
                       },
-                      setTimeout(function() { location.hash = 'Hello' }, 5000)
+                      location.hash = ''
                       ),
                       e.preventDefault()
                   }})
