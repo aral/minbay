@@ -12,6 +12,18 @@ exports.create = function (api) {
     screen_view: function (path, sbot) {
       if(path === 'Edit Profile') {
         var identify = h('input.identify', {placeholder: 'Your Name', name: 'namespace'})
+
+        var newName = h('button', 'Save', {onclick: function (e) {
+          if(identify.value)
+            api.publish({
+              type: 'about',
+              about: id,
+              name: identify.value || undefined,
+              }, location.hash = ''
+            ),
+            e.preventDefault()
+          }})
+
         var div = h('div.column.scroller',
           {style: {'overflow': 'auto'}},
           h('div.scroller__wrapper',
@@ -20,17 +32,7 @@ exports.create = function (api) {
                 h('h1', 'Edit Your Profile'),
                 h('form',
                   identify,
-                  h('button', 'Save', {onclick: function (e) {
-                    if(identify.value)
-                      api.publish({
-                        type: 'about',
-                        about: id,
-                        name: identify.value || undefined,
-                      },
-                      location.hash = ''
-                      ),
-                      e.preventDefault()
-                  }})
+                  newName
                 )
               )
             )
