@@ -2,13 +2,6 @@ var h = require('hyperscript')
 var u = require('../util')
 var pull = require('pull-stream')
 
-//var plugs = require('../plugs')
-//var avatar = plugs.first(exports.avatar = [])
-//var avatar_name = plugs.first(exports.avatar_name = [])
-//var avatar_link = plugs.first(exports.avatar_link = [])
-//var message_confirm = plugs.first(exports.message_confirm = [])
-//var follower_of = plugs.first(exports.follower_of = [])
-
 //render a message when someone follows someone,
 //so you see new users
 function isRelated(value, name) {
@@ -81,8 +74,7 @@ exports.create = function (api) {
       label.textContent = you_follow ? 'Unfollow' : 'Follow'
     }
 
-    return h('div', state,
-      h('a', {href:'#', onclick: function () {
+    return h('a', {href:'#', onclick: function () {
         api.message_confirm({
           type: 'contact',
           contact: id,
@@ -93,7 +85,6 @@ exports.create = function (api) {
           update()
         })
       }}, h('br'), h('button', label))
-    )
   }
   return exports
 }

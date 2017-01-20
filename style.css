@@ -226,6 +226,13 @@ code {
 
 /* avatar */
 
+.avatar--profile {
+  width: 7em;
+  float: left;
+  border-radius: 5px;
+  margin-right: .5em;
+}
+
 .avatar--full {
   margin: .5em;
   width: 100%;
