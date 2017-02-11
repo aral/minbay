@@ -1,11 +1,11 @@
 {
   "name": "minbay",
-  "description": "minimal as possible sbot client",
-  "version": "1.1.0",
-  "homepage": "https://github.com/ssbc/minbay",
+  "description": "minimal as possible sbot client and library",
+  "version": "1.2.0",
+  "homepage": "https://github.com/evbogue/minbay",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ssbc/minbay.git"
+    "url": "git://github.com/evbogue/minbay.git"
   },
   "dependencies": {
     "cont": "^1.0.3",
