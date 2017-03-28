@@ -1144,9 +1144,9 @@ iselement@^1.1.3:
   version "1.1.4"
   resolved iselement-1.1.4.tgz#7e55b52a8ebca50a7e2e80e5b8d2840f32353146
 
-isexe@^1.1.1:
-  version "1.1.2"
-  resolved isexe-1.1.2.tgz#36f3e22e60750920f5e7241a476a8c6a42275ad0
+isexe@^2.0.0:
+  version "2.0.0"
+  resolved isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10
 
 isobject@^2.0.0:
   version "2.1.0"
@@ -1432,15 +1432,15 @@ micromatch@^2.1.5:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
-mime-db@~1.26.0:
-  version "1.26.0"
-  resolved mime-db-1.26.0.tgz#eaffcd0e4fc6935cf8134da246e2e6c35305adff
+mime-db@~1.27.0:
+  version "1.27.0"
+  resolved mime-db-1.27.0.tgz#820f572296bbd20ec25ed55e5b5de869e5436eb1
 
 mime-types@^2.1.11, mime-types@^2.1.12, mime-types@~2.1.7:
-  version "2.1.14"
-  resolved mime-types-2.1.14.tgz#f7ef7d97583fcaf3b7d282b6f8b5679dab1e94ee
+  version "2.1.15"
+  resolved mime-types-2.1.15.tgz#a4ebf5064094569237b8cf70046776d09fc92aed
   dependencies:
-    mime-db "~1.26.0"
+    mime-db "~1.27.0"
 
 mime@^1.2.11:
   version "1.3.4"
@@ -1477,8 +1477,8 @@ minimist@~0.0.1, minimist@~0.0.7:
     minimist "0.0.8"
 
 moment@^2.13.0:
-  version "2.18.0"
-  resolved moment-2.18.0.tgz#6cfec6a495eca915d02600a67020ed994937252c
+  version "2.18.1"
+  resolved moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f
 
 monotonic-timestamp@~0.0.8, monotonic-timestamp@~0.0.9:
   version "0.0.9"
@@ -1519,9 +1519,9 @@ multicb@^1.0.0:
   version "1.2.1"
   resolved multicb-1.2.1.tgz#e2499df476a7f8f8d52ded265d13b2c1a69d9827
 
-multiserver@^1.2.0, multiserver@^1.7.0, multiserver@^1.7.2:
-  version "1.7.6"
-  resolved multiserver-1.7.6.tgz#77f9ecb20c86ff4269cdc16e22f0824224c5ad25
+multiserver@^1.2.0, multiserver@^1.7.0, multiserver@^1.8.1:
+  version "1.8.2"
+  resolved multiserver-1.8.2.tgz#eb400b0926b77860fd8ca68efdb47c662566c963
   dependencies:
     pull-cat "~1.1.5"
     pull-stream "^3.4.3"
@@ -2042,6 +2042,10 @@ pull-many@^1.0.7, pull-many@~1.0.6:
   dependencies:
     pull-stream "^3.4.5"
 
+pull-next@0.0.2:
+  version "0.0.2"
+  resolved pull-next-0.0.2.tgz#39f0e9c45d7797822647b95dba6bad243d99655e
+
 pull-next@^0.0.1:
   version "0.0.1"
   resolved pull-next-0.0.1.tgz#1b6048d036cfae66642fd61fbb506fda9536cf1f
@@ -2116,8 +2120,8 @@ pull-stream-to-stream@~1.2.4:
     pull-core "1"
 
 pull-stream-to-stream@~1.3.0:
-  version "1.3.3"
-  resolved pull-stream-to-stream-1.3.3.tgz#f283f5b63c39a1e49d334e3c81d2c15ce851e9b4
+  version "1.3.4"
+  resolved pull-stream-to-stream-1.3.4.tgz#3f81d8216bd18d2bfd1a198190471180e2738399
 
 "pull-stream@>=2.20 <3", pull-stream@~2.26.0:
   version "2.26.1"
@@ -2394,9 +2398,9 @@ safe-buffer@^5.0.1:
   version "5.0.1"
   resolved safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7
 
-scuttlebot@9.4.6:
-  version "9.4.6"
-  resolved scuttlebot-9.4.6.tgz#01e16ef18f02b2f4ad5acb469258712c86de89f2
+scuttlebot@9.5.0:
+  version "9.5.0"
+  resolved scuttlebot-9.5.0.tgz#04289bd2b60b5f3a56b17dcb571e830cd3928134
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
@@ -2428,6 +2432,7 @@ scuttlebot@9.4.6:
     pull-inactivity "~2.1.1"
     pull-level "^2.0.2"
     pull-many "~1.0.6"
+    pull-next "0.0.2"
     pull-notify "0.1.1"
     pull-paramap "~1.2.1"
     pull-ping "^2.0.2"
@@ -2450,8 +2455,8 @@ scuttlebot@9.4.6:
     zerr "^1.0.0"
 
 secret-handshake@^1.1.1:
-  version "1.1.3"
-  resolved secret-handshake-1.1.3.tgz#fbd721f94359417828c77bf207455b4e70075116
+  version "1.1.4"
+  resolved secret-handshake-1.1.4.tgz#49395f5a0a5fe671d4a0c385d2d5872ee21f92d1
   dependencies:
     chloride "^2.0.1"
     deep-equal "~1.0.0"
@@ -2460,12 +2465,12 @@ secret-handshake@^1.1.1:
     pull-stream "^3.4.5"
 
 secret-stack@^3.2.0:
-  version "3.2.1"
-  resolved secret-stack-3.2.1.tgz#1c0de47e9e254f1e5b203f683e7fb93a0ce88e9a
+  version "3.2.2"
+  resolved secret-stack-3.2.2.tgz#0c41e7a60b9d19f404ea76f2b18e0c320c455a1a
   dependencies:
     hoox "0.0.1"
     map-merge "^1.1.0"
-    multiserver "^1.7.2"
+    multiserver "^1.8.1"
     muxrpc "^6.2.2"
     non-private-ip "^1.3.0"
     pull-inactivity "~2.1.1"
@@ -2473,8 +2478,8 @@ secret-stack@^3.2.0:
     stream-to-pull-stream "^1.6.1"
 
 secure-scuttlebutt@^15.5.0:
-  version "15.5.1"
-  resolved secure-scuttlebutt-15.5.1.tgz#87b21d5eb01bfa8447c500c3f669360bd8bd196d
+  version "15.5.2"
+  resolved secure-scuttlebutt-15.5.2.tgz#b0ad623d29efdce5ee383c69ec9421a167beef3d
   dependencies:
     bytewise "^1.1.0"
     cont "~1.0.0"
@@ -2694,8 +2699,8 @@ ssb-marked@^0.5.4:
   resolved ssb-marked-0.5.4.tgz#e2f0a17854d968a41e707dee6161c783f907330f
 
 ssb-marked@^0.7.0:
-  version "0.7.0"
-  resolved ssb-marked-0.7.0.tgz#7a3aec5687f885628cc3444b5044746583f440dd
+  version "0.7.1"
+  resolved ssb-marked-0.7.1.tgz#1f66fccb48516f97bf6e6c69601e378803409b9e
 
 ssb-mentions@^0.1.0:
   version "0.1.2"
@@ -2859,11 +2864,11 @@ supports-color@^2.0.0:
   resolved supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7
 
 tar-fs@^1.13.0, tar-fs@^1.7.0:
-  version "1.15.1"
-  resolved tar-fs-1.15.1.tgz#f4622f5d5e250742b3679a9a8463acfc12cdefd1
+  version "1.15.2"
+  resolved tar-fs-1.15.2.tgz#761f5b32932c7b39461a60d537faea0d8084830c
   dependencies:
     chownr "^1.0.1"
-    mkdirp "^0.5.0"
+    mkdirp "^0.5.1"
     pump "^1.0.0"
     tar-stream "^1.1.2"
 
@@ -3115,10 +3120,10 @@ web-bootloader@^0.1.0:
     hyperprogress "^0.1.0"
 
 which@1:
-  version "1.2.12"
-  resolved which-1.2.12.tgz#de67b5e450269f194909ef23ece4ebe416fa1192
+  version "1.2.14"
+  resolved which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5
   dependencies:
-    isexe "^1.1.1"
+    isexe "^2.0.0"
 
 wide-align@^1.1.0:
   version "1.1.0"
