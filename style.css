@@ -128,7 +128,7 @@ code {
 /* compose */
 
 .compose {
-  width: 100%;
+  width: 98%;
   margin-top: 1em;
 }
 
@@ -142,6 +142,7 @@ code {
   margin-top: -1px;
   border-radius: 2px;
   background: #fff;
+  width: 95%;
 }
 
 .message:focus, .message:hover {
@@ -228,6 +229,7 @@ code {
 
 .avatar--profile {
   width: 7em;
+  height: 7em;
   float: left;
   border-radius: 5px;
   margin-right: .5em;
@@ -294,7 +296,7 @@ textarea {
   overflow: auto;
   margin-top: 3em;
   margin-bottom: 3em;
-  width: 600px;
+  width: 512px;
   // background: white;
   z-index: 5;
 }
