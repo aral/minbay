@@ -64,7 +64,7 @@ function Scroller(scroller, content, render, isPrepend, isSticky, cb) {
       //we don't know the scroll bar positions if it's display none
       //so we have to wait until it becomes visible again.
       if(!isVisible(content)) {
-        if(content.children.length < 25) add()
+        if(content.children.length < 15) add()
       }
       else if(!isScroll(scroller)) add()
       else if(isEnd(scroller, buffer, isPrepend)) add()
