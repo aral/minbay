@@ -29,8 +29,8 @@ after@~0.8.1:
   resolved after-0.8.2.tgz#fedb394f9f0e02aa9768e702bda23b505fae7e1f
 
 ajv@^4.9.1:
-  version "4.11.5"
-  resolved ajv-4.11.5.tgz#b6ee74657b993a01dce44b7944d56f485828d5bd
+  version "4.11.6"
+  resolved ajv-4.11.6.tgz#947e93049790942b2a2d60a8289b28924d39f987
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -227,8 +227,8 @@ boom@2.x.x:
     hoek "2.x.x"
 
 brace-expansion@^1.0.0:
-  version "1.1.6"
-  resolved brace-expansion-1.1.6.tgz#7197d7eaa9b87e648390ea61fc66c84427420df9
+  version "1.1.7"
+  resolved brace-expansion-1.1.7.tgz#3effc3c50e000531fb720eaff80f0ae8ef23cf59
   dependencies:
     balanced-match "^0.4.1"
     concat-map "0.0.1"
@@ -249,7 +249,7 @@ browser-split@0.0.0:
   version "0.0.0"
   resolved browser-split-0.0.0.tgz#41419caef769755929dd518967d3eec0a6262771
 
-buffer-shims@^1.0.0:
+buffer-shims@~1.0.0:
   version "1.0.0"
   resolved buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51
 
@@ -437,6 +437,14 @@ continuable@~1.2.0:
 core-util-is@~1.0.0:
   version "1.0.2"
   resolved core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7
+
+cross-spawn@^5.1.0:
+  version "5.1.0"
+  resolved cross-spawn-5.1.0.tgz#e8bd0efee58fcff6f8f94510a0a554bbfa235449
+  dependencies:
+    lru-cache "^4.0.1"
+    shebang-command "^1.2.0"
+    which "^1.2.9"
 
 cryptiles@2.x.x:
   version "2.0.5"
@@ -682,8 +690,8 @@ forever-agent@~0.6.1:
   resolved forever-agent-0.6.1.tgz#fbc71f0c41adeb37f96c577ad1ed42d8fdacca91
 
 form-data@~2.1.1:
-  version "2.1.2"
-  resolved form-data-2.1.2.tgz#89c3534008b97eada4cbb157d58f6f5df025eae4
+  version "2.1.4"
+  resolved form-data-2.1.4.tgz#33c183acf193276ecaa98143a69e94bfee1750d1
   dependencies:
     asynckit "^0.4.0"
     combined-stream "^1.0.5"
@@ -1380,6 +1388,13 @@ looper@^3.0.0, looper@~3.0.0:
   version "3.0.0"
   resolved looper-3.0.0.tgz#2efa54c3b1cbaba9b94aee2e5914b0be57fbb749
 
+lru-cache@^4.0.1:
+  version "4.0.2"
+  resolved lru-cache-4.0.2.tgz#1d17679c069cda5d040991a09dbc2c0db377e55e
+  dependencies:
+    pseudomap "^1.0.1"
+    yallist "^2.0.0"
+
 ltgt@^2.1.2, ltgt@~2.1.1:
   version "2.1.3"
   resolved ltgt-2.1.3.tgz#10851a06d9964b971178441c23c9e52698eece34
@@ -1520,13 +1535,13 @@ multicb@^1.0.0:
   resolved multicb-1.2.1.tgz#e2499df476a7f8f8d52ded265d13b2c1a69d9827
 
 multiserver@^1.2.0, multiserver@^1.7.0, multiserver@^1.8.1:
-  version "1.8.2"
-  resolved multiserver-1.8.2.tgz#eb400b0926b77860fd8ca68efdb47c662566c963
+  version "1.9.1"
+  resolved multiserver-1.9.1.tgz#f7dfa757aaaf6de2d64aa6853adbdb1ca884ab67
   dependencies:
     pull-cat "~1.1.5"
     pull-stream "^3.4.3"
     pull-ws "^3.2.7"
-    secret-handshake "^1.1.1"
+    secret-handshake "^1.1.5"
     separator-escape "0.0.0"
     socks "1.1.9"
     stream-to-pull-stream "^1.7.2"
@@ -1658,8 +1673,10 @@ nopt@^4.0.1:
     osenv "^0.1.4"
 
 normalize-path@^2.0.1:
-  version "2.0.1"
-  resolved normalize-path-2.0.1.tgz#47886ac1662760d4261b7d979d241709d3ce3f7a
+  version "2.1.1"
+  resolved normalize-path-2.1.1.tgz#1ab28b556e198363a8c1a6f7e6fa20137fe6aed9
+  dependencies:
+    remove-trailing-separator "^1.0.1"
 
 normalize-uri@^1.0.0:
   version "1.1.0"
@@ -1846,12 +1863,13 @@ plur@^2.0.0:
     irregular-plurals "^1.0.0"
 
 prebuild-install@^2.1.0:
-  version "2.1.1"
-  resolved prebuild-install-2.1.1.tgz#d0a77ea51b6a00f928cb71bc0ccea24f87ec171e
+  version "2.1.2"
+  resolved prebuild-install-2.1.2.tgz#d9ae0ca85330e03962d93292f95a8b44c2ebf505
   dependencies:
     expand-template "^1.0.2"
     github-from-package "0.0.0"
     minimist "^1.2.0"
+    mkdirp "^0.5.1"
     node-abi "^2.0.0"
     noop-logger "^0.1.1"
     npmlog "^4.0.1"
@@ -1911,6 +1929,10 @@ prr@~0.0.0:
 prr@~1.0.1:
   version "1.0.1"
   resolved prr-1.0.1.tgz#d3fc114ba06995a45ec6893f484ceb1d78f5f476
+
+pseudomap@^1.0.1:
+  version "1.0.2"
+  resolved pseudomap-1.0.2.tgz#f052a28da70e618917ef0a8ac34c1ae5a68286b3
 
 pull-abortable@~4.0.0:
   version "4.0.0"
@@ -2042,13 +2064,13 @@ pull-many@^1.0.7, pull-many@~1.0.6:
   dependencies:
     pull-stream "^3.4.5"
 
-pull-next@0.0.2:
-  version "0.0.2"
-  resolved pull-next-0.0.2.tgz#39f0e9c45d7797822647b95dba6bad243d99655e
-
 pull-next@^0.0.1:
   version "0.0.1"
   resolved pull-next-0.0.1.tgz#1b6048d036cfae66642fd61fbb506fda9536cf1f
+
+pull-next@^1.0.0:
+  version "1.0.0"
+  resolved pull-next-1.0.0.tgz#af46a51f0c5f05539db305f798d5d3389afcbaff
 
 pull-notify@0.0.2:
   version "0.0.2"
@@ -2093,8 +2115,8 @@ pull-pushable@^2.0.0:
   resolved pull-pushable-2.0.1.tgz#02bdca51a39cf585f483fbecde2fc9378076f212
 
 pull-reader@^1.2.3, pull-reader@^1.2.4, pull-reader@^1.2.5:
-  version "1.2.8"
-  resolved pull-reader-1.2.8.tgz#a673c837dae6bbace25fd0480fc6ab5583158463
+  version "1.2.9"
+  resolved pull-reader-1.2.9.tgz#d2e9ad00bcfb54e62aa66d42c2dbbcb5eb6843b0
 
 pull-reconnect@^0.0.3:
   version "0.0.3"
@@ -2210,8 +2232,8 @@ randomatic@^1.1.3:
     kind-of "^3.0.2"
 
 rc@^1.0.3, rc@^1.1.0, rc@^1.1.6, rc@^1.1.7:
-  version "1.1.7"
-  resolved rc-1.1.7.tgz#c5ea564bb07aff9fd3a5b32e906c1d3a65940fea
+  version "1.2.1"
+  resolved rc-1.2.1.tgz#2e03e8e42ee450b8cb3dce65be1bf8974e1dfd95
   dependencies:
     deep-extend "~0.4.0"
     ini "~1.3.0"
@@ -2237,15 +2259,15 @@ rc@~0.5.4:
     string_decoder "~0.10.x"
 
 readable-stream@^2.0.0, "readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.1.4, readable-stream@^2.2.2:
-  version "2.2.6"
-  resolved readable-stream-2.2.6.tgz#8b43aed76e71483938d12a8d46c6cf1a00b1f816
+  version "2.2.9"
+  resolved readable-stream-2.2.9.tgz#cf78ec6f4a6d1eb43d26488cac97f042e74b7fc8
   dependencies:
-    buffer-shims "^1.0.0"
+    buffer-shims "~1.0.0"
     core-util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
     process-nextick-args "~1.0.6"
-    string_decoder "~0.10.x"
+    string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
 
 readable-stream@~1.1.9:
@@ -2336,6 +2358,10 @@ remark@^3.2.2:
     vfile-reporter "^1.5.0"
     ware "^1.3.0"
 
+remove-trailing-separator@^1.0.1:
+  version "1.0.1"
+  resolved remove-trailing-separator-1.0.1.tgz#615ebb96af559552d4bf4057c8436d486ab63cc4
+
 repeat-element@^1.1.2:
   version "1.1.2"
   resolved repeat-element-1.1.2.tgz#ef089a178d1483baae4d93eb98b4f9e4e11d990a
@@ -2398,14 +2424,15 @@ safe-buffer@^5.0.1:
   version "5.0.1"
   resolved safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7
 
-scuttlebot@9.5.0:
-  version "9.5.0"
-  resolved scuttlebot-9.5.0.tgz#04289bd2b60b5f3a56b17dcb571e830cd3928134
+scuttlebot@9.6.0:
+  version "9.6.0"
+  resolved scuttlebot-9.6.0.tgz#b143907000f30b857f4fff14d2a009d4fe7c61be
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
     broadcast-stream "~0.0.0"
     cont "~1.0.3"
+    cross-spawn "^5.1.0"
     deep-equal "^1.0.1"
     explain-error "~1.0.1"
     graphmitter "^1.6.3"
@@ -2432,7 +2459,7 @@ scuttlebot@9.5.0:
     pull-inactivity "~2.1.1"
     pull-level "^2.0.2"
     pull-many "~1.0.6"
-    pull-next "0.0.2"
+    pull-next "^1.0.0"
     pull-notify "0.1.1"
     pull-paramap "~1.2.1"
     pull-ping "^2.0.2"
@@ -2443,7 +2470,7 @@ scuttlebot@9.5.0:
     rimraf "^2.4.2"
     secret-stack "^3.2.0"
     secure-scuttlebutt "^15.5.0"
-    ssb-blobs "^0.1.6"
+    ssb-blobs "^1.0.0"
     ssb-client "^4.0.2"
     ssb-config "^2.0.0"
     ssb-keys "^7.0.0"
@@ -2454,9 +2481,9 @@ scuttlebot@9.5.0:
     stream-to-pull-stream "^1.6.10"
     zerr "^1.0.0"
 
-secret-handshake@^1.1.1:
-  version "1.1.4"
-  resolved secret-handshake-1.1.4.tgz#49395f5a0a5fe671d4a0c385d2d5872ee21f92d1
+secret-handshake@^1.1.5:
+  version "1.1.5"
+  resolved secret-handshake-1.1.5.tgz#2a849535d4381da36c9443ab0e91de82ce979eed
   dependencies:
     chloride "^2.0.1"
     deep-equal "~1.0.0"
@@ -2537,6 +2564,16 @@ sha.js@^2.4.8:
   dependencies:
     inherits "^2.0.1"
 
+shebang-command@^1.2.0:
+  version "1.2.0"
+  resolved shebang-command-1.2.0.tgz#44aac65b695b03398968c39f363fee5deafdf1ea
+  dependencies:
+    shebang-regex "^1.0.0"
+
+shebang-regex@^1.0.0:
+  version "1.0.0"
+  resolved shebang-regex-1.0.0.tgz#da42f49740c0b42db2ca9728571cb190c98efea3
+
 shellsubstitute@^1.1.0:
   version "1.2.0"
   resolved shellsubstitute-1.2.0.tgz#e4f702a50c518b0f6fe98451890d705af29b6b70
@@ -2575,8 +2612,8 @@ socks@1.1.9:
     smart-buffer "^1.0.4"
 
 sodium-browserify-tweetnacl@^0.2.0:
-  version "0.2.2"
-  resolved sodium-browserify-tweetnacl-0.2.2.tgz#be422da1193d499d874bd63d3e2c1c76a30ee48f
+  version "0.2.3"
+  resolved sodium-browserify-tweetnacl-0.2.3.tgz#b5537ffcbb9f74ebc443b8b6a211b291e8fcbc8e
   dependencies:
     chloride-test "^1.1.0"
     ed2curve "^0.1.4"
@@ -2612,9 +2649,21 @@ ssb-avatar@^0.2.0:
     ssb-msgs "^5.2.0"
     ssb-ref "^2.3.2"
 
-ssb-blobs@^0.1.6, ssb-blobs@^0.1.7:
+ssb-blobs@^0.1.7:
   version "0.1.8"
   resolved ssb-blobs-0.1.8.tgz#bf488e66118843871ffcc9e5cba02721ddc4003e
+  dependencies:
+    cont "^1.0.3"
+    level "^1.4.0"
+    multiblob "^1.10.0"
+    pull-level "^1.5.2"
+    pull-notify "^0.1.0"
+    pull-stream "^3.3.0"
+    ssb-ref "^2.3.0"
+
+ssb-blobs@^1.0.0:
+  version "1.0.0"
+  resolved ssb-blobs-1.0.0.tgz#742862e0053a2d1259a6ee9ce30ee7169dcc84c1
   dependencies:
     cont "^1.0.3"
     level "^1.4.0"
@@ -2670,8 +2719,8 @@ ssb-keys@^6.0.0, ssb-keys@^6.1.0:
     ssb-ref "^2.0.0"
 
 ssb-keys@^7.0.0:
-  version "7.0.6"
-  resolved ssb-keys-7.0.6.tgz#d671e5a0f95a6140c8164cbbe597f4e2d8def448
+  version "7.0.7"
+  resolved ssb-keys-7.0.7.tgz#bb7aea07f70da172f5fdf666ae105d7d4f482c90
   dependencies:
     chloride "^2.2.0"
     mkdirp "~0.5.0"
@@ -2699,8 +2748,8 @@ ssb-marked@^0.5.4:
   resolved ssb-marked-0.5.4.tgz#e2f0a17854d968a41e707dee6161c783f907330f
 
 ssb-marked@^0.7.0:
-  version "0.7.1"
-  resolved ssb-marked-0.7.1.tgz#1f66fccb48516f97bf6e6c69601e378803409b9e
+  version "0.7.2"
+  resolved ssb-marked-0.7.2.tgz#160e24113782a9ca5e806072aa7a65e7c865dbf2
 
 ssb-mentions@^0.1.0:
   version "0.1.2"
@@ -2819,6 +2868,12 @@ string-width@^1.0.0, string-width@^1.0.1:
 string_decoder@~0.10.x:
   version "0.10.31"
   resolved string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94
+
+string_decoder@~1.0.0:
+  version "1.0.0"
+  resolved string_decoder-1.0.0.tgz#f06f41157b664d86069f84bdbdc9b0d8ab281667
+  dependencies:
+    buffer-shims "~1.0.0"
 
 stringify-entities@^1.0.0:
   version "1.3.0"
@@ -3119,7 +3174,7 @@ web-bootloader@^0.1.0:
     hyperfile "^1.1.1"
     hyperprogress "^0.1.0"
 
-which@1:
+which@1, which@^1.2.9:
   version "1.2.14"
   resolved which-1.2.14.tgz#9a87c4378f03e827cecaf1acdf56c736c01c14e5
   dependencies:
@@ -3169,6 +3224,10 @@ xtend@~2.1.1:
 xtend@~3.0.0:
   version "3.0.0"
   resolved xtend-3.0.0.tgz#5cce7407baf642cba7becda568111c493f59665a
+
+yallist@^2.0.0:
+  version "2.1.2"
+  resolved yallist-2.1.2.tgz#1c11f9218f076089a47dd512f93c6699a6a81d52
 
 zerr@^1.0.0, zerr@^1.0.1:
   version "1.0.4"
