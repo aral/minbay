@@ -305,8 +305,8 @@ character-reference-invalid@^1.0.0:
   resolved character-reference-invalid-1.1.0.tgz#dec9ad1dfb9f8d06b4fcdaa2adc3c4fd97af1e68
 
 chloride-test@^1.1.0:
-  version "1.1.1"
-  resolved chloride-test-1.1.1.tgz#9b87a2ccc9ab5982868cddaf9bf373f9b001e4df
+  version "1.2.2"
+  resolved chloride-test-1.2.2.tgz#178686a85e9278045112e96e8c791793f9a10aea
   dependencies:
     json-buffer "^2.0.11"
 
@@ -1473,17 +1473,13 @@ min-document@^2.6.1:
   dependencies:
     brace-expansion "^1.0.0"
 
-minimist@0.0.8:
+minimist@0.0.8, minimist@~0.0.1, minimist@~0.0.7:
   version "0.0.8"
   resolved minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d
 
 minimist@^1.1.0, minimist@^1.1.2, minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
   resolved minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284
-
-minimist@~0.0.1, minimist@~0.0.7:
-  version "0.0.10"
-  resolved minimist-0.0.10.tgz#de3f98543dbf96082be48ad1a0c7cda836301dcf
 
 "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@~0.5.1:
   version "0.5.1"
@@ -2124,13 +2120,6 @@ pull-reconnect@^0.0.3:
   dependencies:
     pull-defer "^0.2.2"
 
-pull-scroll@^0.3.3:
-  version "0.3.4"
-  resolved pull-scroll-0.3.4.tgz#c9b1226023ef45ba38160377a638b312bb7b3b8e
-  dependencies:
-    pull-pause "0.0.0"
-    pull-stream "^3.0.1"
-
 pull-sink-through@0.0.0:
   version "0.0.0"
   resolved pull-sink-through-0.0.0.tgz#d3c0492f3a80b4ed204af67c4b4f935680fc5b1f
@@ -2145,19 +2134,13 @@ pull-stream-to-stream@~1.3.0:
   version "1.3.4"
   resolved pull-stream-to-stream-1.3.4.tgz#3f81d8216bd18d2bfd1a198190471180e2738399
 
-"pull-stream@>=2.20 <3", pull-stream@~2.26.0:
-  version "2.26.1"
-  resolved pull-stream-2.26.1.tgz#4bf2559de87b8af2f5b96b7190d2ee431ca1e519
-  dependencies:
-    pull-core "~1.1.0"
-
-pull-stream@^2.28.3:
+"pull-stream@>=2.20 <3", pull-stream@^2.28.3:
   version "2.28.4"
   resolved pull-stream-2.28.4.tgz#7ea97413c1619c20bc3bdf9e10e91347b03253e4
   dependencies:
     pull-core "~1.1.0"
 
-pull-stream@^3.0.0, pull-stream@^3.0.1, pull-stream@^3.1.0, pull-stream@^3.2.3, pull-stream@^3.3.0, pull-stream@^3.4.0, pull-stream@^3.4.2, pull-stream@^3.4.3, pull-stream@^3.4.5:
+pull-stream@^3.0.0, pull-stream@^3.1.0, pull-stream@^3.2.3, pull-stream@^3.3.0, pull-stream@^3.4.0, pull-stream@^3.4.2, pull-stream@^3.4.3, pull-stream@^3.4.5:
   version "3.5.0"
   resolved pull-stream-3.5.0.tgz#1ee5b6f76fd3b3a49a5afb6ded5c0320acb3cfc7
 
@@ -2166,6 +2149,12 @@ pull-stream@~2.18.2:
   resolved pull-stream-2.18.3.tgz#7a07962234d7579c908860db8c27f7f34fd45000
   dependencies:
     pull-core "~1.0.0"
+
+pull-stream@~2.26.0:
+  version "2.26.1"
+  resolved pull-stream-2.26.1.tgz#4bf2559de87b8af2f5b96b7190d2ee431ca1e519
+  dependencies:
+    pull-core "~1.1.0"
 
 pull-stringify@~1.2.2:
   version "1.2.2"
@@ -2532,13 +2521,13 @@ secure-scuttlebutt@^15.5.0:
     stream-to-pull-stream "^1.7.2"
     typewiselite "^1.0.0"
 
-"semver@2.x || 3.x || 4 || 5", semver@~5.1.0:
-  version "5.1.1"
-  resolved semver-5.1.1.tgz#a3292a373e6f3e0798da0b20641b9a9c5bc47e19
-
-semver@^5.3.0, semver@~5.3.0:
+"semver@2.x || 3.x || 4 || 5", semver@^5.3.0, semver@~5.3.0:
   version "5.3.0"
   resolved semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f
+
+semver@~5.1.0:
+  version "5.1.1"
+  resolved semver-5.1.1.tgz#a3292a373e6f3e0798da0b20641b9a9c5bc47e19
 
 separator-escape@0.0.0:
   version "0.0.0"
@@ -2662,8 +2651,8 @@ ssb-blobs@^0.1.7:
     ssb-ref "^2.3.0"
 
 ssb-blobs@^1.0.0:
-  version "1.0.0"
-  resolved ssb-blobs-1.0.0.tgz#742862e0053a2d1259a6ee9ce30ee7169dcc84c1
+  version "1.0.1"
+  resolved ssb-blobs-1.0.1.tgz#776c7f4dcae74835c32c391d9125243f48a8a8ea
   dependencies:
     cont "^1.0.3"
     level "^1.4.0"
@@ -2806,8 +2795,8 @@ ssb-ws@^1.0.1:
     web-bootloader "^0.1.0"
 
 sshpk@^1.7.0:
-  version "1.11.0"
-  resolved sshpk-1.11.0.tgz#2d8d5ebb4a6fab28ffba37fa62a90f4a3ea59d77
+  version "1.13.0"
+  resolved sshpk-1.13.0.tgz#ff2a3e4fd04497555fed97b39a0fd82fafb3a33c
   dependencies:
     asn1 "~0.2.3"
     assert-plus "^1.0.0"
