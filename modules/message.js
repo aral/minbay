@@ -30,9 +30,9 @@ exports.needs = {
 
 exports.gives = 'message_render'
 
-function message_content_mini_fallback(msg)  {
-  return h('code', msg.value.content.type)
-}
+//function message_content_mini_fallback(msg)  {
+//  return h('code', msg.value.content.type)
+//}
 
 exports.create = function (api) {
 
@@ -54,7 +54,7 @@ exports.create = function (api) {
     if(el) return mini(msg, el)
 
     var el = api.message_content(msg)
-    if(!el) return mini(msg, message_content_mini_fallback(msg))
+    //if(!el) return mini(msg, message_content_mini_fallback(msg))
 
     var links = []
     for(var k in CACHE) {
