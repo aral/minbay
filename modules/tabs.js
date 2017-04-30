@@ -95,7 +95,7 @@ exports.create = function (api) {
   //  catch (_) { }
 
     if(!saved || saved.length < 3)
-      saved = ['Public', 'Mentions', 'Direct']
+      saved = ['Public', 'Direct', 'Mentions']
 
     saved.forEach(function (path) {
       var el = api.screen_view(path)
