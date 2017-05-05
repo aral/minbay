@@ -25,6 +25,7 @@ module.exports = {
   "message.js":  require('./message.js'),
   "identify.js": require('./identify.js'),
   "names.js":  require('./names.js'),
+  "raw.js":  require('./raw.js'),
   "post.js":  require('./post.js'),
   "private.js":  require('./private.js'),
   "profile-edit.js": require('./profile-edit.js'),
