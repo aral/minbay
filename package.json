@@ -51,7 +51,7 @@
     "ssb-query": "^1.0.0",
     "ssb-ref": "^2.6.2",
     "ssb-sort": "^1.0.0",
-    "ssb-ws": "^1.0.1",
+    "ssb-ws": "^1.0.3",
     "suggest-box": "^2.2.1",
     "text-node-searcher": "^1.1.0",
     "visualize-buffer": "0.0.1"
