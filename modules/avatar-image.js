@@ -18,11 +18,9 @@ exports.gives = {
   connection_status: true, avatar_image: true
 }
 
-
 function isFunction (f) {
   return 'function' === typeof f
 }
-
 
 var ready = false
 var waiting = []
@@ -33,8 +31,6 @@ var cache = {}
 
 exports.create = function (api) {
   var avatars  = {}
-
-  //blah blah
   return {
     connection_status: function (err) {
       if (err) return
@@ -82,7 +78,6 @@ exports.create = function (api) {
         })
       )
     },
-
     avatar_image: function (author, classes) {
       classes = classes || ''
       if(classes && 'string' === typeof classes) classes = '.avatar--'+classes

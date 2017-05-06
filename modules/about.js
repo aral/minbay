@@ -1,4 +1,3 @@
-
 var h = require('hyperscript')
 
 function idLink (id) {
@@ -9,8 +8,6 @@ function asLink (ln) {
   return 'string' === typeof ln ? ln : ln.link
 }
 
-//var blob_url = require('../plugs').first(exports.blob_url = [])
-
 exports.needs = {
   blob_url: 'first'
 }
@@ -18,7 +15,6 @@ exports.needs = {
 exports.gives = 'message_content'
 
 exports.create = function (api) {
-
   return function (msg) {
     if(msg.value.content.type !== 'about') return
 
@@ -39,10 +35,5 @@ exports.create = function (api) {
         : null
       )
     )
-
   }
-
 }
-
-
-

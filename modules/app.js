@@ -19,7 +19,6 @@ module.exports = {
         return window.location.hash.substring(1)
       }
 
-      // console.log(hash() || 'tabs')
       var view = api.screen_view(hash() || 'tabs')
 
       var screen = h('div.screen.column', view)
@@ -27,9 +26,8 @@ module.exports = {
       window.onhashchange = function (ev) {
         var _view = view
         view = api.screen_view(hash() || 'tabs')
-
         if(_view) screen.replaceChild(view, _view)
-        else      document.body.appendChild(view)
+        else document.body.appendChild(view)
       }
 
       document.body.appendChild(screen)

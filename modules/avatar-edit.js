@@ -11,20 +11,13 @@ var ref = require('ssb-ref')
 var visualize = require('visualize-buffer')
 var self_id = require('../keys').id
 
-//var confirm = plugs.first(exports.message_confirm = [])
-//var sbot_blobs_add = plugs.first(exports.sbot_blobs_add = [])
-//var blob_url = plugs.first(exports.blob_url = [])
-//var sbot_links = plugs.first(exports.sbot_links = [])
-//var avatar_name = plugs.first(exports.avatar_name = [])
-//
-
 function crop (d, cb) {
   var data
   var canvas = hypercrop(h('img', {src: d}))
 
   return h('div.column.avatar_pic',
     canvas,
-    //canvas.selection,
+    canvas.selection,
     h('div.row.avatar_pic__controls',
       h('button', 'okay', {onclick: function () {
         cb(null, canvas.selection.toDataURL())
