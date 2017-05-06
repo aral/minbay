@@ -20,9 +20,7 @@ function Hash (onHash) {
     onHash && onHash(err, h)
   })
 }
-//uncomment this to use from browser...
-//also depends on having ssb-ws installed.
-//var createClient = require('ssb-lite')
+
 var createClient = require('ssb-client')
 
 var createConfig = require('ssb-config/inject')
@@ -38,7 +36,6 @@ module.exports = {
     connection_status: 'map'
   },
   gives: {
-//    connection_status: true,
     sbot_blobs_add: true,
     sbot_links: true,
     sbot_links2: true,
@@ -53,7 +50,6 @@ module.exports = {
     sbot_whoami: true
   },
 
-//module.exports = {
   create: function (api) {
 
     var opts = createConfig()
@@ -180,11 +176,6 @@ module.exports = {
     }
   }
 }
-
-
-
-
-
 
 
 

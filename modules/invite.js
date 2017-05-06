@@ -112,11 +112,6 @@ exports.create = function (api) {
             console.log("NO REDIRECT")
         })
       }
-
-      // If we are in the browser,
-      // and do not already have a remote set, automatically trigger the invite.
-      // if(process.title == 'browser' && !localStorage.remote) attempt()
-
       return div
     }
   }

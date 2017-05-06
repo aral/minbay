@@ -24,5 +24,4 @@ exports.create = function () {
       title: new Date(msg.value.timestamp)
     }, ''))
   }
-
 }

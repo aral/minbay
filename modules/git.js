@@ -5,20 +5,9 @@ var paramap = require('pull-paramap')
 var cat = require('pull-cat')
 var human = require('human-time')
 var combobox = require('hypercombo')
-
 var getAvatar = require('ssb-avatar')
 var KVGraph = require('kvgraph')
 var mergeRepo = require('ssb-git/merge')
-
-//var plugs = require('../plugs')
-//var message_link = plugs.first(exports.message_link = [])
-//var message_confirm = plugs.first(exports.message_confirm = [])
-//var message_compose = plugs.first(exports.message_compose = [])
-//var sbot_links = plugs.first(exports.sbot_links = [])
-//var sbot_links2 = plugs.first(exports.sbot_links2 = [])
-//var sbot_get = plugs.first(exports.sbot_get = [])
-//var avatar_name = plugs.first(exports.avatar_name = [])
-//var markdown = plugs.first(exports.markdown = [])
 
 exports.needs = {
   message_link: 'first',
@@ -37,7 +26,6 @@ exports.gives = {
   message_content: true
 }
 
-
 var self_id = require('../keys').id
 
 function shortRefName(ref) {
@@ -45,7 +33,6 @@ function shortRefName(ref) {
 }
 
 exports.create = function (api) {
-
   function getRefs(msg) {
     var updates = new KVGraph('key')
     var _cb, _refs
@@ -291,8 +278,6 @@ exports.create = function (api) {
     )
     return form
   }
-
-
 
   return {
     message_content: function (msg, sbot) {
