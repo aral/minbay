@@ -42,13 +42,13 @@ exports.create = function (api) {
               value: { content: {
                 type: "about",
                 about: {$prefix: "@"},
-                image: {link: {$prefix: "&"}}
+                image: {$truthy: true}
             }}
           }},
           {
             $map: {
               id: ["value", "content", "about"],
-              image: ["value", "content", "image", "link"],
+              image: ["value", "content", "image"],
               by: ["value", "author"],
               ts: 'timestamp'
           }}],
@@ -61,6 +61,7 @@ exports.create = function (api) {
             return
           }
           last = a.ts
+          if (a.image && typeof a.image === 'object') a.image = a.image.link
           //set image for avatar.
           //overwrite another avatar
           //you picked.
