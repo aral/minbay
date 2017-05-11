@@ -2,9 +2,9 @@
 
 ![minbay.png](minbay.png)
 
-Minbay is a simple-as-possible local lite client for [Secure Scuttlebutt](http://scuttlebot.io) using [Patchbay](https://gitmx.com/%25s9mSFATE4RGyJx9wgH22lBrvD4CgUQW4yeguSWWjtqc%3D.sha256) modules and compiled using [depject](https://gitmx.com/%25%2BGrd1NiHD3RgaCEbcesLGeEFpjL1AfeN5xfkGaezyoI%3D.sha256).
+Minbay is a simple-as-possible local lite client for [Secure Scuttlebutt](http://scuttlebot.io).
 
-Minbay supports only the lite client for remote and local. To use the lite client you'll need a local lite client invite, as well as an invite to a pub on the main sbot network. 
+Back in the day Minbay used Dominic Tarr's [Patchbay](https://github.com/ssbc/patchbay) modules, but the current maintainers have changed the Patchbay modules so much between v6 and v7 that Minbay is now a fork of Patchbay -- honoring Dominic's original vision of the project.
 
 ### Install
 
@@ -16,23 +16,14 @@ Minbay supports only the lite client for remote and local. To use the lite clien
 At this point Sbot and Minbay should launch. It'll output 
 
 ```
-Your lite client is now listening at http://localhost:3000/
+Your lite client is now listening at http://localhost:3013/
 Here's an invite. Copy and paste the link below into your browser.
-http://localhost:3000#ws://localhost:8989~shs:8Qee0I/DwI5DHSCi3p5fsl6FyLGArrnDz3ox9qZr5Qc=:r00a2jOdv6leywA3HpYDWI86vjpCiFFb8CO+YAOM/rI=
+http://localhost:3013#ws://localhost:8989~shs:8Qee0I/DwI5DHSCi3p5fsl6FyLGArrnDz3ox9qZr5Qc=:r00a2jOdv6leywA3HpYDWI86vjpCiFFb8CO+YAOM/rI=
 ```
 
 Click the invite to connect the lite client in your browser to the sbot daemon.
 
-Next you may need an invite to a pub on the main network to see the posts of others, see [scuttlebot.io](http://scuttlebot.io/docs/social/join-a-pub.html) for details
-
-### Offline install
-
-If you're already on Scuttlebot and have git-ssb installed, you can install all of Minbay's dependencies while offline with [yarn](http://yarnpkg.com).
-
-```
-yarn run ssb
-yarn start
-```
+Minbay supports only the lite client for remote and local. To use the lite client you'll need a local lite client invite, as well as an invite to a pub on the main sbot network. If you use Minbay on your local machine, you can move your secret key by copying it from `.ssb/secret` into the browser. Click the 'lock' icon to import your key once you have Minbay running.
 
 ## License
 
