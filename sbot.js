@@ -40,13 +40,15 @@ if (argv[0] == 'server') {
     .use(require('scuttlebot/plugins/replicate'))
     .use(require('ssb-blobs'))
     .use(require('scuttlebot/plugins/invite'))
-    .use(require('scuttlebot/plugins/block'))
+    //.use(require('scuttlebot/plugins/block'))
     .use(require('scuttlebot/plugins/local'))
     .use(require('scuttlebot/plugins/logging'))
     .use(require('scuttlebot/plugins/private'))
     .use(require('ssb-ws'))
     .use(require('ssb-links'))
     .use(require('ssb-query'))
+    .use(require('ssb-ebt'))
+    .use(require('ssb-fulltext'))
 
   // add third-party plugins
   //require('scuttlebot/plugins/plugins').loadUserPlugins(createSbot, config)
