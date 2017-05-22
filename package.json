@@ -36,7 +36,7 @@
     "pull-pause": "0.0.0",
     "pull-reconnect": "^0.0.3",
     "pull-stream": "^3.4.5",
-    "scuttlebot": "github:ssbc/scuttlebot#_flume",
+    "scuttlebot": "github:ssbc/scuttlebot#flume",
     "simple-mime": "^0.1.0",
     "split-buffer": "^1.0.0",
     "ssb-avatar": "^0.2.0",
