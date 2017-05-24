@@ -1,7 +1,7 @@
 {
   "name": "minbay",
   "description": "minimal as possible sbot client and library",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "homepage": "https://github.com/evbogue/minbay",
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
     "pull-pause": "0.0.0",
     "pull-reconnect": "^0.0.3",
     "pull-stream": "^3.4.5",
-    "scuttlebot": "github:ssbc/scuttlebot#flume",
+    "scuttlebot": "ssbc/scuttlebot#flume",
     "simple-mime": "^0.1.0",
     "split-buffer": "^1.0.0",
     "ssb-avatar": "^0.2.0",
