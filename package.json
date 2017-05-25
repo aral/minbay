@@ -63,7 +63,6 @@
     "indexhtmlify": "^1.3.1"
   },
   "scripts": {
-    "ssb": "rm -rf ssb-pkgs && git clone ssb://%DcQl5bvPqEeU6ETOfdB98o6Q3rRXPuq4HbXaBt3tBSE=.sha256 ssb-pkgs",
     "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
     "start": "node sbot server --allowPrivate"
   },
