@@ -1,7 +1,7 @@
 {
   "name": "minbay",
   "description": "minimal as possible sbot client and library",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "homepage": "https://github.com/evbogue/minbay",
   "repository": {
     "type": "git",
