@@ -1,12 +1,12 @@
 var Tabs = require('hypertabs-vertical')
 var h = require('hyperscript')
 var pull = require('pull-stream')
-var u = require('../util')
-var keyscroll = require('../keyscroll')
+var u = require('minbase/util')
+var keyscroll = require('minbase/keyscroll')
 var open = require('open-external')
 var ref = require('ssb-ref')
 var visualize = require('visualize-buffer')
-var id = require('../keys').id
+var id = require('minbase/keys').id
 var getAvatar = require('ssb-avatar')
 
 function ancestor (el) {

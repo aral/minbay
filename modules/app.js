@@ -1,4 +1,4 @@
-var plugs = require('../plugs')
+var plugs = require('minbase/plugs')
 var h = require('hyperscript')
 
 module.exports = {
@@ -6,7 +6,8 @@ module.exports = {
   gives: 'app',
   create: function (api) {
     return function () {
-      document.head.appendChild(h('style', require('../style.css.json')))
+      document.head.appendChild(h('style', require('minbase/style.css.json')))
+      document.head.appendChild(h('style', require('../minbay.css.json')))
 
       window.addEventListener('error', window.onError = function (e) {
         document.body.appendChild(h('div.error',
