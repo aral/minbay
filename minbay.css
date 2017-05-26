@@ -1,22 +1,5 @@
-/*@font-face {
-  font-family: "Source Sans Pro";
-  font-weight: 400;
-  font-style: normal;
-  src: url("http://evbogue.com/ssp/fonts/source-sans-pro-regular.ttf") format("truetype"); 
-}*/
-
 body {
   font-family: 'Source Sans Pro', sans-serif;
-}
-
-* {
-  word-wrap: break-word;
-  
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 1.2em;
-  margin-top: .35ex;
 }
 
 hr {
@@ -25,10 +8,6 @@ hr {
   border-width: 1px 0 0;
   height: 0;
   margin-bottom: .9em;
-}
-
-p {
-  margin-top: .35ex;
 }
 
 a:link, a:visited, a:active {
@@ -43,57 +22,10 @@ a:focus {
 }
 
 .screen {
-  width: 100%;
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 0;right: 0;
-  overflow-y: hidden;
   background: #f9f9f9;
 }
 
-.column {
-  display: flex;
-  flex-direction: column;
-  min-height:0px;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  min-height:0px;
-}
-
-.end {
-  justify-content: flex-end;
-}
-
-.wrap {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.no-shrink {
-  flex-shrink: 0;
-}
-
-.expand {
-  justify-content: space-between;
-}
-
-.scroll-y {
-  overflow-y: auto;
-  min-height: 0px;
-}
-
-.scroll-x {
-  overflow-x: auto;
-  min-width: 0px;
-}
-
 pre {
-  white-space: pre-line;
-  word-wrap: break-all;
   background: #eee;
   border: 1px solid #ddd;
   border-radius: 2px;
@@ -103,43 +35,13 @@ code {
   background: #eee;
 }
 
-.wide {
-  width: 100%;
-}
-
-.menu {
-  display: none;
-  z-index: 5;
-}
-
-/* scrolling feeds, threads */
-
-.scroller {
-  width: 100%;
-}
-
-.scroller__wrapper {
-  flex: 1;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* compose */
-
-.compose {
-  width: 98%;
-  margin-top: 1em;
-}
-
-/* messages */
-
 .message {
   position: relative;
   flex-basis: 0;
   padding: .5em;
   border: 1px solid #ddd;
   margin-top: -1px;
+  margin-bottom: 0;
   border-radius: 2px;
   background: #fff;
   width: 95%;
