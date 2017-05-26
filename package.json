@@ -13,7 +13,7 @@
   },
   "scripts": {
     "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
-    "start": "node sbot server --allowPrivate"
+    "start": "node node_modules/minbase/sbot server --allowPrivate"
   },
   "license": "MIT"
 }
