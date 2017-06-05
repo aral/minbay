@@ -63,8 +63,8 @@ append-batch@^0.0.1:
   resolved "https://registry.yarnpkg.com/append-batch/-/append-batch-0.0.1.tgz#9224858e556997ccc07f11f1ee9a128532aa0d25"
 
 aproba@^1.0.3:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.1.1.tgz#95d3600f07710aa0e9298c726ad5ecf2eacbabab"
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/aproba/-/aproba-1.1.2.tgz#45c6629094de4e96f693ef7eab74ae079c240fc1"
 
 are-we-there-yet@~1.1.2:
   version "1.1.4"
@@ -237,10 +237,6 @@ broadcast-stream@~0.0.0:
 browser-split@0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/browser-split/-/browser-split-0.0.0.tgz#41419caef769755929dd518967d3eec0a6262771"
-
-buffer-shims@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/buffer-shims/-/buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51"
 
 bytewise-core@^1.2.2:
   version "1.2.3"
@@ -588,7 +584,7 @@ expand-template@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/expand-template/-/expand-template-1.0.3.tgz#6c303323177a62b1b22c070279f7861287b69b1a"
 
-explain-error@^1.0.1, explain-error@^1.0.3, explain-error@~1.0.1:
+explain-error@^1.0.1, explain-error@^1.0.3, explain-error@^1.0.4, explain-error@~1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/explain-error/-/explain-error-1.0.4.tgz#a793d3ac0cad4c6ab571e9968fbbab6cb2532929"
 
@@ -668,11 +664,11 @@ flumeview-level@^1.0.3:
     pull-write "^1.1.1"
 
 flumeview-level@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/flumeview-level/-/flumeview-level-2.0.1.tgz#7781d81377b81e3a092d2622b59736b362fe2027"
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/flumeview-level/-/flumeview-level-2.0.2.tgz#bcd361d75863644b48a50dfb5028546459430f8f"
   dependencies:
     bytewise "^1.1.0"
-    explain-error "^1.0.3"
+    explain-error "^1.0.4"
     level "^1.7.0"
     ltgt "^2.1.3"
     obv "0.0.0"
@@ -1513,8 +1509,8 @@ mime@^1.2.11:
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.3.6.tgz#591d84d3653a6b0b4a3b9df8de5aa8108e72e5e0"
 
 minbase@^1.2.0:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/minbase/-/minbase-1.2.1.tgz#ea1a6f3763ffc2614a85317d1adc86836a461bc3"
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/minbase/-/minbase-1.2.2.tgz#383437fd41aea24eac7d89fe6020954e37f291d8"
   dependencies:
     cont "^1.0.3"
     dataurl- "^0.1.0"
@@ -1600,9 +1596,9 @@ multiblob-http@^0.2.0:
     pull-stream "^3.4.3"
     stream-to-pull-stream "^1.7.0"
 
-multiblob@^1.10.0, multiblob@^1.10.1:
-  version "1.10.4"
-  resolved "https://registry.yarnpkg.com/multiblob/-/multiblob-1.10.4.tgz#f43964be54cd93c53c93581ecbee1c029b09b3bf"
+multiblob@^1.10.1, multiblob@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/multiblob/-/multiblob-1.11.0.tgz#911618f0e77ff0d54b4215294f2bb0f9fe16a124"
   dependencies:
     blake2s "~1.0.1"
     cont "~1.0.1"
@@ -2295,14 +2291,14 @@ readable-stream@^1.0.33:
     string_decoder "~0.10.x"
 
 readable-stream@^2.0.0, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.1.5, readable-stream@^2.2.2:
-  version "2.2.9"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.9.tgz#cf78ec6f4a6d1eb43d26488cac97f042e74b7fc8"
+  version "2.2.10"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.10.tgz#effe72bb7c884c0dd335e2379d526196d9d011ee"
   dependencies:
-    buffer-shims "~1.0.0"
     core-util-is "~1.0.0"
     inherits "~2.0.1"
     isarray "~1.0.0"
     process-nextick-args "~1.0.6"
+    safe-buffer "^5.0.1"
     string_decoder "~1.0.0"
     util-deprecate "~1.0.1"
 
@@ -2446,12 +2442,12 @@ rimraf@~2.4.0:
     glob "^6.0.1"
 
 safe-buffer@^5.0.1:
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.0.1.tgz#d263ca54696cd8a306b5ca6551e92de57918fbe7"
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.0.tgz#fe4c8460397f9eaaaa58e73be46273408a45e223"
 
 "scuttlebot@github:ssbc/scuttlebot#flume":
   version "9.8.0"
-  resolved "https://codeload.github.com/ssbc/scuttlebot/tar.gz/d42610e87a071fe62aa1d0ad3053db084fb8076d"
+  resolved "https://codeload.github.com/ssbc/scuttlebot/tar.gz/95671f8a1c271f96a96d605f9cc83598e0a7f337"
   dependencies:
     atomic-file "0.0.1"
     bash-color "~0.0.3"
@@ -2460,7 +2456,7 @@ safe-buffer@^5.0.1:
     cross-spawn "^5.1.0"
     deep-equal "^1.0.1"
     explain-error "^1.0.3"
-    flumeview-reduce "^1.0.4"
+    flumeview-reduce "^1.1.0"
     graphreduce "^3.0.2"
     has-network "0.0.1"
     ip "^0.3.3"
@@ -2501,7 +2497,7 @@ safe-buffer@^5.0.1:
     ssb-client "^4.4.1"
     ssb-config "^2.0.0"
     ssb-ebt "0.0.7"
-    ssb-friends "^2.0.0"
+    ssb-friends "^2.0.1"
     ssb-keys "^7.0.0"
     ssb-links "^3.0.0"
     ssb-msgs "~5.2.0"
@@ -2670,8 +2666,8 @@ sodium-chloride@^1.1.0:
   resolved "https://registry.yarnpkg.com/sodium-chloride/-/sodium-chloride-1.1.0.tgz#247a234b88867f6dff51332b605f193a65bf6839"
 
 sodium-native@^1.10.0:
-  version "1.10.0"
-  resolved "https://registry.yarnpkg.com/sodium-native/-/sodium-native-1.10.0.tgz#b635405104efa2e55c562414c6f58d3c79b6b372"
+  version "1.10.1"
+  resolved "https://registry.yarnpkg.com/sodium-native/-/sodium-native-1.10.1.tgz#95876693b336c51d4a9a4ea1ccc7a048bbb3e373"
   dependencies:
     nan "^2.4.0"
     node-gyp-build "^3.0.0"
@@ -2697,12 +2693,12 @@ ssb-avatar@^0.2.0:
     ssb-ref "^2.3.2"
 
 ssb-blobs@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ssb-blobs/-/ssb-blobs-1.0.1.tgz#776c7f4dcae74835c32c391d9125243f48a8a8ea"
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/ssb-blobs/-/ssb-blobs-1.1.0.tgz#823f7e3045c39b2d222b0223b1efc0f291319ecd"
   dependencies:
     cont "^1.0.3"
     level "^1.4.0"
-    multiblob "^1.10.0"
+    multiblob "^1.11.0"
     pull-level "^1.5.2"
     pull-notify "^0.1.0"
     pull-stream "^3.3.0"
@@ -2746,7 +2742,7 @@ ssb-feed@^2.2.1:
     ssb-keys "^7.0.0"
     ssb-ref "^2.0.0"
 
-ssb-friends@^2.0.0:
+ssb-friends@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/ssb-friends/-/ssb-friends-2.0.1.tgz#b84612f6c3f75fc895fc1d8bc1c25964596707dc"
   dependencies:
@@ -3255,8 +3251,8 @@ wide-align@^1.1.0:
     string-width "^1.0.2"
 
 word-wrap@^1.1.0:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.2.tgz#8fa78c3bda3e3138c7797fabceae709968814b41"
+  version "1.2.3"
+  resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"
 
 wrap-fn@^0.1.0:
   version "0.1.5"
