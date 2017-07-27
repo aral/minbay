@@ -1,4 +1,3 @@
-var plugs = require('minbase/plugs')
 var h = require('hyperscript')
 
 module.exports = {
