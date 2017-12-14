@@ -1,3 +1,7 @@
+#! /usr/bin/env node
+
+var http	 = require('http')
+var serve	 = require('ecstatic');
 var fs           = require('fs')
 var path         = require('path')
 var pull         = require('pull-stream')
@@ -10,6 +14,7 @@ var createHash   = require('multiblob/util').createHash
 var minimist     = require('minimist')
 var muxrpcli     = require('muxrpcli')
 var cmdAliases   = require('scuttlebot/lib/cli-cmd-aliases')
+var ProgressBar  = require('scuttlebot/lib/progress')
 
 //get config as cli options after --, options before that are
 //options to the command.
@@ -27,7 +32,7 @@ if(keys.curve === 'k256')
 
 var manifestFile = path.join(config.path, 'manifest.json')
 
-if (argv[0] == 'server') {
+if (argv[0] == null) {
 
   // special server command:
   // import sbot and start the server
@@ -40,18 +45,20 @@ if (argv[0] == 'server') {
     .use(require('ssb-friends'))
     .use(require('ssb-blobs'))
     .use(require('scuttlebot/plugins/invite'))
-    //.use(require('scuttlebot/plugins/block'))
     .use(require('scuttlebot/plugins/local'))
     .use(require('scuttlebot/plugins/logging'))
     .use(require('scuttlebot/plugins/private'))
-    .use(require('ssb-ws'))
-    .use(require('ssb-links'))
     .use(require('ssb-query'))
-    .use(require('ssb-ebt'))
-    .use(require('ssb-fulltext'))
+    .use(require('ssb-links'))
+    .use(require('ssb-ws'))
+    .use(require('ssb-names'))
+
+  http.createServer(
+    serve({ root: __dirname + '/build/'})
+  ).listen(3013)
 
   // add third-party plugins
-  //require('scuttlebot/plugins/plugins').loadUserPlugins(createSbot, config)
+  //require('./plugins/plugins').loadUserPlugins(createSbot, config)
 
   // start server
 
@@ -61,9 +68,8 @@ if (argv[0] == 'server') {
   // write RPC manifest to ~/.ssb/manifest.json
   fs.writeFileSync(manifestFile, JSON.stringify(server.getManifest(), null, 2))
 
-  var lite = require('./serve')
-  lite.serve()
-
+  if(process.stdout.isTTY)
+    ProgressBar(server.progress)
 } else {
 
   // normal command:
@@ -149,9 +155,5 @@ if (argv[0] == 'server') {
     muxrpcli(argv, manifest, rpc, config.verbose)
   })
 }
-
-
-
-
 
 
