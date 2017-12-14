@@ -6,7 +6,7 @@ require('depject')([
   {
   message_name: require('./modules/message-name.js'),
   message_link: require('./modules/message-link.js'),
-  nav: require('patchnav-less'),
+  nav: require('./modules/nav'),
   sbot:  require('./modules/sbot'),
   id:  require('patchidentity'),
   compose:  require('patchcompose'),
@@ -31,7 +31,7 @@ require('depject')([
             //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: '#private'}, 'Private')),
             h('li', h('a', {href: '#compose'}, 'Compose')),
-            h('li', h('a', {href: '#key'}, 'Key')),
+            //h('li', h('a', {href: '#key'}, 'Key')),
             /*h('form.search', { onsubmit: function (e) {
                 //if (err) throw err
                 window.location.hash = '?' + search.value
