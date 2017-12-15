@@ -1,6 +1,6 @@
 var h = require('hyperscript')
 exports.gives = {
-  app: { view: true, viewMenu: true }
+  app: { view: true }
 }
 
 exports.needs = {
@@ -16,10 +16,6 @@ exports.create = function (api) {
       return api.compose.text(meta, {path: path}, function (content, context, cb) {
         api.confirm.show(content, context, cb)
       })
-    },
-    viewMenu: function (src) {
-      if(src == '')
-        return h('a', {href: 'compose'}, 'compose')
     }
   }}
 }

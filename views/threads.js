@@ -28,8 +28,7 @@ exports.needs = {
   message: {layout: 'first'},
   identity: { unbox: 'first' },
   compose: { text: 'first' },
-  confirm: { show: 'first' },
-  app: { viewMenu: 'map' }
+  confirm: { show: 'first' }
 }
 
 exports.gives = {

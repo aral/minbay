@@ -3,16 +3,14 @@ var pull = require('pull-stream')
 var ref = require('ssb-ref')
 var More = require('pull-more')
 var scroller = require('hyperloadmore/stream')
-var viewMenu = require('./junk/view-menu')
 
 exports.needs = {
   sbot: { createLogStream: 'first' },
-  message: {layout: 'first'},
-  app: {viewMenu: 'map'}
+  message: {layout: 'first'}
 }
 
 exports.gives = {
-  app: {menu: true, view: true}
+  app: {view: true}
 }
 
 exports.create = function (api) {
@@ -21,7 +19,7 @@ exports.create = function (api) {
       view: function (src) {
         if(src !== '') return
 
-        var content = h('div.content', viewMenu(api.app.viewMenu(src)))
+        var content = h('div.content')
 
         function createStream (opts) {
           return pull(
@@ -45,9 +43,6 @@ exports.create = function (api) {
 
 
         return content
-      },
-      menu: function () {
-        return 'public'
       }
     }
   }

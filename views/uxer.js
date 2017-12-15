@@ -3,7 +3,7 @@ var pull = require('pull-stream')
 var ref = require('ssb-ref')
 var markdown = require('ssb-markdown')
 var More = require('pull-more')
-var HyperMoreStream = require('hyperloadmore/stream')
+var scroller = require('hyperloadmore/stream')
 
 exports.needs = {
   sbot: { createUserStream: 'first' },
@@ -35,14 +35,14 @@ exports.create = function (api) {
 
         pull(
           createStream({old: false, limit: 10, id: src}),
-          HyperMoreStream.top(content)
+          scroller.top(content)
         )
 
         pull(
           createStream({reverse: true, live: false, limit: 10,
             id: src
           }),
-          HyperMoreStream.bottom(content)
+          scroller.bottom(content)
         )
 
 
