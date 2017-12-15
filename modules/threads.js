@@ -100,7 +100,7 @@ exports.create = function (api) {
     message: { meta:
       function (data, context) {
         if(data && data.value.content.root)
-          return h('a', 'reply', {href: data.value.content.root})
+          return h('a', 'reply', {href: '#' + data.value.content.root})
     }}
   }
 }
