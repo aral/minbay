@@ -17,16 +17,15 @@ exports.create = function () {
     var mentions = {}
     if(Array.isArray(content.mentions))
       content.mentions.forEach(function (link) {
-        if(link.name) mentions["@"+link.name] = link.link
+        if(link.name) mentions[link.name] = '#' + link.link
       })
     
     var md = h('div.markdown')
     md.innerHTML = markdown.block(content.text, {
       toUrl: function (url, image) {
-        if(!image) return url
-        if(url[0] !== '&') return url
+        if(url[0] == '@') return '#' + url
         if(ref.isBlob(url)) return 'http://localhost:8989/blobs/get/'+url
-        return '#'+(mentions[url]?mentions[url]:url)
+        else return url
       }
     })
     return md
