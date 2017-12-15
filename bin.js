@@ -15,6 +15,7 @@ var minimist     = require('minimist')
 var muxrpcli     = require('muxrpcli')
 var cmdAliases   = require('scuttlebot/lib/cli-cmd-aliases')
 var ProgressBar  = require('scuttlebot/lib/progress')
+var open 	 = require('opener')
 
 //get config as cli options after --, options before that are
 //options to the command.
@@ -70,6 +71,8 @@ if (argv[0] == null) {
   http.createServer(
     serve({ root: __dirname + '/build/'})
   ).listen(3013)
+  open('http://localhost:3013')
+
 
   // add third-party plugins
   //require('./plugins/plugins').loadUserPlugins(createSbot, config)
