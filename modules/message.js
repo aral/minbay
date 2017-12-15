@@ -29,7 +29,7 @@ exports.create = function (api) {
         }
 
         return h('div.message', 
-          h('span.timestamp', h('a', {href: data.key}, human(new Date(data.value.timestamp)))),
+          h('span.timestamp', h('a', {href: '#' + data.key}, human(new Date(data.value.timestamp)))),
           h('div.Avatar',
             h('a', {href: '#' + data.value.author},
               api.avatar.image(data.value.author)
