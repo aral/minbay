@@ -8,6 +8,7 @@
     "url": "git://github.com/evbogue/minbay.git"
   },
   "dependencies": {
+    "brfs": "^1.4.3",
     "depject": "^4.1.1",
     "ecstatic": "^3.1.0",
     "human-time": "0.0.1",
@@ -30,14 +31,19 @@
     "scuttlebot": "^10.4.10",
     "ssb-client": "^4.5.2",
     "ssb-config": "^2.2.0",
+    "ssb-ebt": "^2.0.0",
     "ssb-keys": "^7.0.13",
     "ssb-markdown": "^3.3.0",
     "ssb-names": "^3.1.0",
-    "ssb-ref": "^2.8.0"
+    "ssb-ooo": "^1.0.7",
+    "ssb-ref": "^2.8.0",
+    "ssb-thread": "^1.1.0",
+    "ssb-ws": "^2.0.0",
+    "visualize-buffer": "0.0.1"
   },
   "scripts": {
     "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
-    "start": "node sbot server --allowPrivate"
+    "start": "node bin"
   },
   "devDependencies": {
     "browserify": "^14.5.0",

@@ -38,7 +38,7 @@ if (argv[0] == null) {
   // import sbot and start the server
 
   var createSbot = require('scuttlebot')
-    .use(require('scuttlebot/plugins/plugins'))
+    //.use(require('scuttlebot/plugins/plugins'))
     .use(require('scuttlebot/plugins/master'))
     .use(require('scuttlebot/plugins/gossip'))
     .use(require('scuttlebot/plugins/replicate'))
@@ -46,11 +46,25 @@ if (argv[0] == null) {
     .use(require('ssb-blobs'))
     .use(require('scuttlebot/plugins/invite'))
     .use(require('scuttlebot/plugins/local'))
-    .use(require('scuttlebot/plugins/logging'))
-    .use(require('scuttlebot/plugins/private'))
-    .use(require('ssb-query'))
-    .use(require('ssb-links'))
+    //.use(require('scuttlebot/plugins/logging'))
+    //.use(require('scuttlebot/plugins/private'))
+    //.use(require('ssb-query'))
+    //.use(require('ssb-links'))
+    .use(require('ssb-ooo'))
+    .use(require('ssb-ebt'))
     .use(require('ssb-ws'))
+    .use({
+      name: 'share-ws',
+      version: '1.0.0',
+      init: function (sbot) {
+        sbot.ws.use(function (req, res, next) {
+          res.setHeader('Access-Control-Allow-Origin', '*')
+          if(req.url == '/get-address')
+            res.end(sbot.ws.getAddress())
+          else next()
+        })
+      }
+    })
     .use(require('ssb-names'))
 
   http.createServer(

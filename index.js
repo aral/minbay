@@ -1,6 +1,7 @@
 var h = require('hyperscript')
 var path = require('path')
 var id = require('./keys').id
+var http = require('http')
 
 require('depject')([
   require('./modules'),
@@ -20,6 +21,16 @@ require('depject')([
         avatar: {image: 'first', name: 'first'}
       },
       create: function (api) {
+        if ((localStorage.remote === undefined) || (localStorage.remote === '')) {
+          http.get('http://localhost:8989/get-address', function (res) {
+            res.on('data', (ws) => {
+              localStorage.remote = ws
+            })
+          }).on('error', (e) => {
+            console.log(e.message)
+          })
+        }
+
         document.head.appendChild(h('style', require('./style.css.json')))
         document.body.appendChild(h('div.navbar',
           h('div.internal',
@@ -29,7 +40,7 @@ require('depject')([
             //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: '#private'}, 'Private')),
             h('li', h('a', {href: '#compose'}, 'Compose')),
-            //h('li', h('a', {href: '#key'}, 'Key')),
+            h('li', h('a', {href: '#key'}, 'Key')),
             /*h('form.search', { onsubmit: function (e) {
                 //if (err) throw err
                 window.location.hash = '?' + search.value
