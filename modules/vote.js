@@ -13,11 +13,11 @@ exports.needs = {
 exports.create = function (api) {
   return { message: {
     action: function (msg, context) {
-      var expression = 'yup'
+      var expression = 'Star'
       var y =  h('a', expression, { href:"#", onclick: function (ev) {
         api.confirm.show({
           type: 'vote', vote: {
-            link: msg.key, value: 1, expression: 'yup'
+            link: msg.key, value: 1, expression: 'Star'
           }
         }, null, function () {})
       }})
@@ -37,7 +37,7 @@ exports.create = function (api) {
     render: function (msg) {
       if(msg.content.type == 'vote') {
         var id = msg.content.vote.link
-        return h('p', 'YUP!', h('a', id, {href: id}))
+        return h('p', 'Star', h('a', id, {href: id}))
       }
     }
   }}
