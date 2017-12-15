@@ -6,6 +6,7 @@
   vertical-align: top;
   width: 26px; height: 26px;
   margin-bottom: 1ex; margin-right: .5ex;
+  border-radius: 3px;
 }
 
 .nav {
