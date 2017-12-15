@@ -20,9 +20,7 @@ require('depject')([
       gives: {},
       needs: { nav: {screen: 'first' }},
       create: function (api) {
-        document.body.appendChild(api.nav.screen())
         document.head.appendChild(h('style', require('./style.css.json')))
-
         document.body.appendChild(h('div.navbar',
           h('div.internal',
             //h('li', h('a', {href: '#' + id}, api.avatar_image(id, 'tiny'))),
@@ -31,7 +29,7 @@ require('depject')([
             //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: '#private'}, 'Private')),
             h('li', h('a', {href: '#compose'}, 'Compose')),
-            h('li', h('a', {href: '#key'}, 'Key')),
+            //h('li', h('a', {href: '#key'}, 'Key')),
             /*h('form.search', { onsubmit: function (e) {
                 //if (err) throw err
                 window.location.hash = '?' + search.value
@@ -42,6 +40,7 @@ require('depject')([
             )*/
           )
         ))
+        document.body.appendChild(api.nav.screen())
         return function () {}
       }
     }
