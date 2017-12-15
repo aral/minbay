@@ -3,12 +3,8 @@ var path = require('path')
 var id = require('./keys').id
 
 require('depject')([
-  require('./views'),
+  require('./modules'),
   {
-  message_name: require('./modules/message-name.js'),
-  message_link: require('./modules/message-link.js'),
-  nav: require('./modules/nav'),
-  sbot:  require('./modules/sbot'),
   identity:  require('patchidentity'),
   compose:  require('patchcompose'),
   names:  require('patchavatar-names'),
@@ -49,7 +45,6 @@ require('depject')([
       }
     }
   },
-  require('./modules/vote'),
   require('patchcompose-drafts'),
   require('patchcompose-file')
 ])
