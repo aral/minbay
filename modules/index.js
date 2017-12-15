@@ -11,6 +11,7 @@ module.exports = {
   private: require('./private'),
   uxer: require('./uxer'),
   message: require('./message'),
-  vote: require('./vote')
+  vote: require('./vote'),
+  key: require('./key')
 }
 
