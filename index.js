@@ -1,5 +1,6 @@
 var h = require('hyperscript')
 var path = require('path')
+var id = require('./keys').id
 
 require('depject')([
   require('./views'),
@@ -8,7 +9,7 @@ require('depject')([
   message_link: require('./modules/message-link.js'),
   nav: require('./modules/nav'),
   sbot:  require('./modules/sbot'),
-  id:  require('patchidentity'),
+  identity:  require('patchidentity'),
   compose:  require('patchcompose'),
   names:  require('patchavatar-names'),
   avatarRaw:  require('patchavatar-raw'),
@@ -18,13 +19,16 @@ require('depject')([
   {
     app: {
       gives: {},
-      needs: { nav: {screen: 'first' }},
+      needs: { 
+        nav: { screen: 'first' },
+        avatar: {image: 'first', name: 'first'}
+      },
       create: function (api) {
         document.head.appendChild(h('style', require('./style.css.json')))
         document.body.appendChild(h('div.navbar',
           h('div.internal',
-            //h('li', h('a', {href: '#' + id}, api.avatar_image(id, 'tiny'))),
-            //h('li', h('a', {href: '#' + id}, api.avatar_name(id))),
+            h('li', h('a.Avatar', {href: '#' + id}, api.avatar.image(id))),
+            h('li', h('a', {href: '#' + id}, api.avatar.name(id))),
             h('li', h('a', {href: '#'}, 'Public')),
             //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: '#private'}, 'Private')),
