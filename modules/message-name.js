@@ -1,4 +1,3 @@
-
 function title (s) {
   var m = /^\n*([^\n]{0,40})/.exec(s)
   return m && (m[1].length == 40 ? m[1]+'...' : m[1])
@@ -7,7 +6,6 @@ function title (s) {
 exports.needs = { 
   sbot: { get: 'first' }
 }
-
 
 exports.gives = 'message_name'
 
