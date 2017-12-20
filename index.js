@@ -7,6 +7,7 @@ require('depject')([
   require('./modules'),
   {
   identity:  require('patchidentity'),
+  nav: require('./modules/nav'),
   compose:  require('patchcompose'),
   names:  require('patchavatar-names'),
   avatarRaw:  require('patchavatar-raw'),
