@@ -23,7 +23,7 @@ exports.create = function () {
     var md = h('div.markdown')
     md.innerHTML = markdown.block(content.text, {
       toUrl: function (url, image) {
-        if(url[0] == '@') return '#' + url
+        if((url[0] == '@') || (url[0] == '%')) return '#' + url
         if(ref.isBlob(url)) return 'http://localhost:8989/blobs/get/'+url
         else return url
       }
