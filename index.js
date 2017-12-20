@@ -1,6 +1,5 @@
 var h = require('hyperscript')
 var path = require('path')
-var id = require('./keys').id
 var http = require('http')
 
 require('depject')([
@@ -19,7 +18,8 @@ require('depject')([
       gives: {},
       needs: { 
         nav: { screen: 'first' },
-        avatar: {image: 'first', name: 'first'}
+        avatar: {image: 'first', name: 'first'},
+        identity: {main: 'first'}
       },
       create: function (api) {
         if ((localStorage.remote === undefined) || (localStorage.remote === '')) {
@@ -31,6 +31,8 @@ require('depject')([
             console.log(e.message)
           })
         }
+        id = api.identity.main()
+
 
         document.head.appendChild(h('style', require('./style.css.json')))
         document.body.appendChild(h('div.navbar',
