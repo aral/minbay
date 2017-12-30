@@ -9,7 +9,7 @@
   border-radius: 3px;
 }
 
-.nav {
+.navless {
   width: 100%;
   position: absolute;
   overflow-y: hidden;
@@ -135,6 +135,15 @@ textarea:focus, {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 }
 
+
+.message, .message > * {
+  animation: fadein .5s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 .message {
   border: 1px solid #eee;
