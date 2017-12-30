@@ -6,7 +6,7 @@ require('depject')([
   require('./modules'),
   {
   identity:  require('patchidentity'),
-  nav: require('./modules/nav'),
+  nav: require('patchnav-less'),
   compose:  require('patchcompose'),
   names:  require('patchavatar-names'),
   avatarRaw:  require('patchavatar-raw'),
@@ -39,7 +39,7 @@ require('depject')([
           h('div.internal',
             h('li', h('a.Avatar', {href: '#' + id}, api.avatar.image(id))),
             h('li', h('a', {href: '#' + id}, api.avatar.name(id))),
-            h('li', h('a', {href: '#'}, 'Public')),
+            h('li', h('a', {href: '#public'}, 'Public')),
             //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: '#private'}, 'Private')),
             h('li', h('a', {href: '#compose'}, 'Compose')),

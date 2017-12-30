@@ -1,6 +1,5 @@
 
 module.exports = {
-  // nav: require('./nav'),
   sbot:  require('./sbot'),
   message_name: require('./message-name.js'),
   message_link: require('./message-link.js'),

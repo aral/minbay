@@ -38,12 +38,12 @@ exports.create = function (api) {
         }
 
         pull(
-          createStream({old: false, limit: 10}),
+          createStream({old: false, limit: 1000}),
           scroller.top(content)
         )
 
         pull(
-          createStream({reverse: true, live: false, limit: 10}),
+          createStream({reverse: true, live: false, limit: 1000}),
           scroller.bottom(content)
         )
 

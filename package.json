@@ -1,7 +1,7 @@
 {
   "name": "minbay",
   "description": "a minimal lite client for secure scuttlebutt",
-  "version": "3.2.0",
+  "version": "3.3.0",
   "homepage": "https://github.com/evbogue/minbay",
   "repository": {
     "type": "git",
@@ -29,7 +29,7 @@
     "pull-reconnect": "0.0.3",
     "pull-stream": "^3.6.1",
     "pull-stringify": "^2.0.0",
-    "scuttlebot": "^10.4.10",
+    "scuttlebot": "^10.5.0",
     "ssb-client": "^4.5.2",
     "ssb-config": "^2.2.0",
     "ssb-ebt": "^2.0.0",
@@ -43,6 +43,7 @@
     "visualize-buffer": "0.0.1"
   },
   "scripts": {
+    "electron": "electro index.js",
     "build": "node scripts/style.js && mkdir -p build && browserify index.js | indexhtmlify > build/index.html",
     "start": "node bin"
   },

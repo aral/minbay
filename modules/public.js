@@ -10,14 +10,14 @@ exports.needs = {
 }
 
 exports.gives = {
-  app: {view: true}
+  app: {view: true, menu: true}
 }
 
 exports.create = function (api) {
   return {
     app: {
       view: function (src) {
-        if(src !== '') return
+        if(src !== 'public') return
 
         var content = h('div.content')
 
@@ -43,6 +43,9 @@ exports.create = function (api) {
 
 
         return content
+      },
+      menu: function () {
+        return 'public'
       }
     }
   }
