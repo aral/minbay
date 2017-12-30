@@ -14,12 +14,6 @@ exports.create = function () {
 
     content = msg.content
 
-    var mentions = {}
-    if(Array.isArray(content.mentions))
-      content.mentions.forEach(function (link) {
-        if(link.name) mentions[link.name] = '#' + link.link
-      })
-    
     var md = h('div.markdown')
     md.innerHTML = markdown.block(content.text, {
       toUrl: function (url, image) {
