@@ -14,7 +14,7 @@ exports.create = function (api) {
     if('string' !== typeof id)
       throw new Error('link must be to message id')
 
-    var link = h('a', {href: '#' + id}, id.substring(0, 10)+'...')
+    var link = h('a', {href: id}, id.substring(0, 10)+'...')
 
     if(ref.isMsg(id))
       api.message_name(id, function (err, name) {

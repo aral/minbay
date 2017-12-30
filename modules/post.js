@@ -14,10 +14,16 @@ exports.create = function () {
 
     content = msg.content
 
+    var mentions = {}
+    if(Array.isArray(content.mentions))
+      content.mentions.forEach(function (link) {
+        if(link.name) mentions[link.name] = link.link
+      })
+
     var md = h('div.markdown')
     md.innerHTML = markdown.block(content.text, {
       toUrl: function (url, image) {
-        if((url[0] == '@') || (url[0] == '%')) return '#' + url
+        //if(url[0] == '%') return '#' + url
         if(ref.isBlob(url)) return 'http://localhost:8989/blobs/get/'+url
         else return url
       }
