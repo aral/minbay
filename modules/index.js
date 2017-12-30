@@ -7,7 +7,7 @@ module.exports = {
   compose: require('patchapp-threads/compose'),
   public: require('patchapp-threads/public'),
   private: require('patchapp-threads/private'),
-  //uxer: require('patchapp-threads/uxer'),
+  uxer: require('patchapp-threads/uxer'),
   message: require('./message'),
   channels: require('patchapp-threads/channels'),
   //vote: require('./vote'),
