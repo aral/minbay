@@ -3,7 +3,8 @@ var path = require('path')
 var http = require('http')
 
 require('depject')([
-  require('./modules'),
+  //require('./modules'),
+  require('patchapp-threads'),
   {rawMessages: require('patchless/modules/raw')},
   {
   id:  require('patchidentity'),
@@ -11,6 +12,7 @@ require('depject')([
   nav: require('patchnav-less'),
   compose:  require('patchcompose'),
   names:  require('patchavatar-names'),
+  avatarViews:  require('patchavatar-names/view'),
   avatarRaw:  require('patchavatar-raw'),
   confirm:  require('patchconfirm-lightbox'),
   suggest: require('patchsuggest'),
