@@ -9,6 +9,10 @@
   border-radius: 3px;
 }
 
+.Avatar__header img {
+  width: 75px;
+}
+
 .navless {
   width: 100%;
   position: absolute;
