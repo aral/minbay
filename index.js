@@ -30,14 +30,19 @@ require('depject')([
         if ((localStorage.remote === undefined) || (localStorage.remote === '')) {
           http.get('http://localhost:8989/get-address', function (res) {
             res.on('data', (ws) => {
-              localStorage.remote = ws
+              ws = ws + ''
+              if (ws.startsWith('ws://')) {
+                localStorage.remote = ws
+              } else {
+                console.log(ws + 'is not a valid ws address')
+              }
             })
           }).on('error', (e) => {
             console.log(e.message)
           })
         }
-        id = api.identity.main()
 
+        id = api.identity.main()
 
         document.head.appendChild(h('style', require('./style.css.json')))
         document.body.appendChild(h('div.navbar',
