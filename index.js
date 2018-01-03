@@ -53,8 +53,8 @@ require('depject')([
             //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: 'private'}, 'Private')),
             h('li', h('a', {href: 'compose'}, 'Compose')),
-            h('li', h('a', {href: 'key'}, 'Key')),
-            /*h('form.search', { onsubmit: function (e) {
+            h('li', h('a', {href: 'key'}, 'Key'))/*,
+            h('form.search', { onsubmit: function (e) {
                 //if (err) throw err
                 window.location.hash = '?' + search.value
                 e.preventDefault()
