@@ -3,12 +3,10 @@ var path = require('path')
 var http = require('http')
 
 require('depject')([
-  //require('./modules'),
   require('patchapp-threads'),
-  {rawMessages: require('patchless/modules/raw')},
   {
   id:  require('patchidentity'),
-  key: require('./modules/key'),
+  key: require('patchapp-key'),
   nav: require('patchnav-less'),
   compose:  require('patchcompose'),
   names:  require('patchavatar-names'),
@@ -50,18 +48,8 @@ require('depject')([
             h('li', h('a.Avatar', {href: id}, api.avatar.image(id))),
             h('li', h('a', {href: id}, api.avatar.name(id))),
             h('li', h('a', {href: 'public'}, 'Public')),
-            //h('li', h('a', {href: '#mentions'}, 'Mentions')),
             h('li', h('a', {href: 'private'}, 'Private')),
-            h('li', h('a', {href: 'compose'}, 'Compose')),
-            h('li', h('a', {href: 'key'}, 'Key'))/*,
-            h('form.search', { onsubmit: function (e) {
-                //if (err) throw err
-                window.location.hash = '?' + search.value
-                e.preventDefault()
-              }},
-              search,
-              h('button.btn.btn-primary.btn-search', 'Search')
-            )*/
+            h('li', h('a', {href: 'key'}, 'Key'))
           )
         ))
         document.body.appendChild(api.nav.screen())
