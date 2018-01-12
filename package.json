@@ -1,7 +1,7 @@
 {
   "name": "minbay",
   "description": "a minimal lite client for secure scuttlebutt",
-  "version": "3.6.1",
+  "version": "3.7.0",
   "homepage": "https://github.com/evbogue/minbay",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
     "hyperloadmore": "^1.1.0",
     "hyperscript": "^2.0.2",
     "opener": "^1.4.3",
+    "patchapp-key": "^1.0.1",
     "patchapp-threads": "^2.2.0",
     "patchavatar-names": "^1.0.0",
     "patchavatar-raw": "^1.0.0",
